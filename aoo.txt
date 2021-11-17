@@ -1,0 +1,19 @@
+Compagnie:
+
+Flotte de navires
+
+Navire:
+
+nom, tonnage, capacite_marchandise, Navire Mixte: capacite_passager, Navire Fret: ;
+
+Trajet:
+
+port_dpt, port_arrive, date_dpt, date_arr, heure_dpt, heure_arr, *navire
+
+Voyageur:
+
+id, nom, prenom, Voyag
+
+Billet:
+
+

@@ -9,6 +9,7 @@ using namespace std;
 
 class Passager;
 class Trajet;
+class Compagnie;
 class Billet{
     int Id;
     int PrixInitial;

@@ -11,6 +11,7 @@ class Personnel{
     string Nom, Prenom;
     static vector <Personnel> ToutPersonnels;
     public:
+        Personnel();
         Personnel(int,string, string);
         string getNom();
         string getPrenom();

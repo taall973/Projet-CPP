@@ -5,6 +5,8 @@
 #include<string>
 #include<vector>
 
+using namespace std;
+
 class Passager;
 class Trajet{
     //Je pense c'est mieux si on fait une classe des escales qui sera lie avec 

@@ -16,6 +16,7 @@ class Trajet{
     vector<Passager*>LesPassagers;
     //Date et Temps
     public:
+        Affiche();
 };
 
 #endif

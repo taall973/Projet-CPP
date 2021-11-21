@@ -18,6 +18,7 @@ class Escales{
         string getNom();
         void setId(int);
         void setNom(string);
+        void Affiche();
 };
 
 #endif

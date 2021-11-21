@@ -20,3 +20,9 @@ void Escales::setId(int i){
 void Escales::setNom(string n){
     Nom = n;
 }
+void Escales::Affiche(){
+    //vector<Escales*>ToutEscales::iterator it;
+    for(it = ToutEscales.begin(); it != ToutEscales.end(); it++){
+        cout << (*it).getNom();
+    }
+}

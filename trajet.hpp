@@ -6,17 +6,23 @@
 #include<vector>
 
 class Passager;
+class Escales;
 class Trajet{
     //Je pense c'est mieux si on fait une classe des escales qui sera lie avec 
     //les trajets comme ca, on fera une trajet d'une list static de tout les escales
     //et une trajet prendra celles ou il passera slm
-    static vector<Trajet*>ToutEscales;
-    vector<Trajet*>escales;
-    string portArrive, portDepart;
+    vector<Escales*>escales;
+    string portDepart, portArrive;
     vector<Passager*>LesPassagers;
     //Date et Temps
     public:
-        Affiche();
+        Trajet(string, string);
+        string getPortDepart();
+        string getPortArrive();
+        void setPortDepart(string);
+        void setPortArrive(string);
+        void afficheEscales();
+        void affichePassagers();
 };
 
 #endif

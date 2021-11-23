@@ -22,6 +22,7 @@ class Trajet{
         void setPortArrive(string);
         void afficheEscales();
         void affichePassagers();
+        void Affiche();
 };
 
 #endif

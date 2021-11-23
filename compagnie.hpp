@@ -21,11 +21,16 @@ class Compagnie{
     static vector<Trajet*>ToutTrajets;
     public:
         Compagnie(int, string);
-        string getId();
+        int getId();
         string getNom();
-        void AjoutPersonnel();
-        void AjoutNavire();
-
+        void AjoutPersonnel(Personnel *);
+        void AjoutNavire(Navire *);
+        void AjoutBillets(Billet *);
+        void AjoutTrajet(Trajet *);
+        void AffichePersonnels();
+        void AfficheNavires();
+        void AfficheBillets();
+        void AfficheTrajets();
 };
 
 #endif

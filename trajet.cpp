@@ -25,3 +25,6 @@ void Trajet::afficheEscales(){
 void Trajet::affichePassagers(){
     
 }
+void Trajet::Affiche(){
+    
+}

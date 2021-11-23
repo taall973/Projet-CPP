@@ -4,8 +4,6 @@
 #include"compagnie.hpp"
 using namespace std;
 
-vector<Billet*>Compagnie::ToutBillets;
-
 Billet::Billet(int i, Passager*a, Trajet*n){
     Id = i;
     p = a;
@@ -24,9 +22,9 @@ int Billet::getPrixInitial(){
 void Billet::setPrixInitial(int p){
     PrixInitial = p;
 }
-/*void Billet::Affiche(){
-    cout << "Voyageur:" << p->getNom() << p->getPrenom() << t->Affiche() << endl
-}*/
+void Billet::Affiche(){
+    cout << "Voyageur:" << p->getNom() << p->getPrenom(); //<< t->Affiche() << endl
+}
 Passager Billet::getPassager(){
     return *p;
 }

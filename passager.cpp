@@ -11,13 +11,14 @@ Passager::Passager(int i, string n, string p, string c){
     Prenom = p;
     Categorie = c;
     if(Categorie == "Insulaire"){
-        Reduction = 0;
-    }else if(Categorie == "Insulaire secondaire"){
         Reduction = 0.25;
+    }else if(Categorie == "Insulaire secondaire"){
+        Reduction = 0.50;
     }else if(Categorie == "Normal"){
-        Reduction = 0.50;
+        Reduction = 1;
     }else{
-        Reduction = 0.50;
+        Categorie = "Normal";
+        Reduction = 1;
     }
 }
 Passager::Passager(int i, string n, string p, string c, Billet* b){
@@ -33,6 +34,7 @@ Passager::Passager(int i, string n, string p, string c, Billet* b){
     }else if(Categorie == "Normal"){
         Reduction = 0.50;
     }else{
+        Categorie = "Normal";
         Reduction = 0.50;
     }
 }

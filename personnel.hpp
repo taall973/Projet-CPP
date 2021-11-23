@@ -5,7 +5,7 @@
 #include<string>
 #include<vector>
 using namespace std;
-
+class Compagnie;
 class Personnel{
     int Id;
     string Nom, Prenom;

@@ -2,15 +2,14 @@
 #include"passager.hpp"
 #include"trajet.hpp"
 #include"compagnie.hpp"
-using namespace std;
 
-vector<Billet*>Compagnie::ToutBillets;
+using namespace std;
 
 Billet::Billet(int i, Passager*a, Trajet*n){
     Id = i;
     p = a;
     t = n;
-    ToutBillets.push_back(*this);
+    c->AjoutBillets(this);
 }
 Billet::~Billet(){}
 int Billet::getId(){

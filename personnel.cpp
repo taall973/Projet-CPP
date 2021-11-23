@@ -1,38 +1,45 @@
-#include"personnel.hpp"
-#include"compagnie.hpp"
-
+#include "personnel.hpp"
+#include "compagnie.hpp"
 
 using namespace std;
-vector<Personnel*>Compagnie::ToutPersonnels;
+vector<Personnel *> Compagnie::ToutPersonnels;
 
-Personnel::Personnel(){}
-Personnel::Personnel(int i, string n, string p){
+Personnel::Personnel() {}
+Personnel::Personnel(int i, string n, string p)
+{
     Id = i;
     Nom = n;
     Prenom = p;
-    ToutPersonnels.push_back(*this);
+    c->AjoutPersonnel(this);
 }
-string Personnel::getNom(){
+string Personnel::getNom()
+{
     return Nom;
 }
-string Personnel::getPrenom(){
+string Personnel::getPrenom()
+{
     return Prenom;
 }
-void Personnel::setNom(string n){
+void Personnel::setNom(string n)
+{
     Nom = n;
 }
-void Personnel::setPrenom(string p){
+void Personnel::setPrenom(string p)
+{
     Prenom = p;
 }
 
-Capitaine::Capitaine(){
+Capitaine::Capitaine()
+{
     Role = "Capitaine";
 }
 
-Second::Second(){
+Second::Second()
+{
     Role = "Second";
 }
 
-Matelot::Matelot(){
+Matelot::Matelot()
+{
     Role = "Matelot";
 }

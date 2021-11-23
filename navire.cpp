@@ -1,4 +1,5 @@
 #include"navire.hpp"
+#include "compagnie.hpp"
 #include"personnel.hpp"
 
 using namespace std;
@@ -6,6 +7,7 @@ using namespace std;
 Navire::Navire(int i, string n){
     Id = i;
     Nom = n;
+    Compagnie->AjoutNavire(this);
 }
 int Navire::getId(){
     return Id;

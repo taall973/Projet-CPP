@@ -1,41 +1,48 @@
 #ifndef PERSONNEL_HPP
 #define PERSONNEL_HPP
 
-#include<iostream>
-#include<string>
-#include<vector>
+#include <iostream>
+#include <string>
+#include <vector>
 using namespace std;
 class Compagnie;
-class Personnel{
+class Personnel
+{
     int Id;
     string Nom, Prenom;
-    static vector <Personnel> ToutPersonnels;
-    public:
-        Personnel();
-        Personnel(int,string, string);
-        string getNom();
-        string getPrenom();
-        void setNom(string);
-        void setPrenom(string);
+    Compagnie *c;
 
+public:
+    Personnel();
+    Personnel(int, string, string);
+    string getNom();
+    string getPrenom();
+    void setNom(string);
+    void setPrenom(string);
 };
 
-class Capitaine:public Personnel{
+class Capitaine : public Personnel
+{
     string Role;
-    public:
-        Capitaine();
+
+public:
+    Capitaine();
 };
 
-class Second:public Personnel{
+class Second : public Personnel
+{
     string Role;
-    public:
-        Second();
+
+public:
+    Second();
 };
 
-class Matelot:public Personnel{
+class Matelot : public Personnel
+{
     string Role;
-    public:
-        Matelot();
+
+public:
+    Matelot();
 };
 
 #endif

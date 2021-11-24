@@ -1,36 +1,45 @@
-#include"billet.hpp"
-#include"passager.hpp"
-#include"trajet.hpp"
-#include"compagnie.hpp"
+#include "billet.hpp"
+#include "passager.hpp"
+#include "trajet.hpp"
+#include "compagnie.hpp"
 
 using namespace std;
 
-Billet::Billet(int i, Passager*a, Trajet*n){
+Billet::Billet(int i, Passager *a, Trajet *n)
+{
     Id = i;
     p = a;
     t = n;
     c->AjoutBillets(this);
-    n->ajoutPassager(this);
+    n->ajoutPassager(a);
 }
-Billet::~Billet(){}
-int Billet::getId(){
+
+Billet::~Billet() {}
+int Billet::getId()
+{
     return Id;
 }
-void Billet::setId(int i){
+void Billet::setId(int i)
+{
     Id = i;
 }
-int Billet::getPrixInitial(){
+int Billet::getPrixInitial()
+{
     return PrixInitial;
 }
-void Billet::setPrixInitial(int p){
+void Billet::setPrixInitial(int p)
+{
     PrixInitial = p;
 }
-void Billet::Affiche(){
+void Billet::Affiche()
+{
     cout << "Voyageur:" << p->getNom() << p->getPrenom(); //<< t->Affiche() << endl
 }
-Passager Billet::getPassager(){
+Passager Billet::getPassager()
+{
     return *p;
 }
-Trajet Billet::getTrajet(){
+Trajet Billet::getTrajet()
+{
     return *t;
 }

@@ -1,47 +1,80 @@
-#include"trajet.hpp"
-#include"billet.hpp"
-#include"escales.hpp"
-#include"passager.hpp"
-#include"compagnie.hpp"
+#include "trajet.hpp"
+#include "billet.hpp"
+#include "escales.hpp"
+#include "passager.hpp"
+#include "compagnie.hpp"
 
 using namespace std;
 
-Trajet::Trajet(string pd, string pa){
+Trajet::Trajet(string pd, string pa)
+{
     portDepart = pd;
     portArrive = pa;
     c->AjoutTrajet(this);
 }
-void Trajet::ajoutEscales(Escales *e){
+void Trajet::ajoutEscales(Escales *e)
+{
     escales.push_back(e);
 }
-void Trajet::ajoutPassager(Passager *p){
+void Trajet::ajoutPassager(Passager *p)
+{
     LesPassagers.push_back(p);
 }
-string Trajet::getPortDepart(){
+string Trajet::getPortDepart()
+{
     return portDepart;
 }
-string Trajet::getPortArrive(){
+string Trajet::getPortArrive()
+{
     return portArrive;
 }
-void Trajet::setPortDepart(string pd){
+void Trajet::setPortDepart(string pd)
+{
     portDepart = pd;
 }
-void Trajet::setPortArrive(string pa){
+void Trajet::setPortArrive(string pa)
+{
     portArrive = pa;
 }
-void Trajet::afficheEscales(){
-    vector<Escales*>::iterator it;
-    for(it = escales.begin(); it != escales.end(); it++){
+
+string Trajet::getDate()
+{
+    return date;
+}
+
+void Trajet::setDate(string d)
+{
+    date = d;
+}
+
+string Trajet::getHeure()
+{
+    return heure;
+}
+
+void Trajet::setHeure(string h)
+{
+    heure = h;
+}
+
+void Trajet::afficheEscales()
+{
+    vector<Escales *>::iterator it;
+    for (it = escales.begin(); it != escales.end(); it++)
+    {
         cout << (*it)->getNom() << endl;
     }
 }
-void Trajet::affichePassagers(){
-    vector<Passager*>::iterator it;
-    for(it = LesPassagers.begin(); it != LesPassagers.end(); it++){
+void Trajet::affichePassagers()
+{
+    vector<Passager *>::iterator it;
+    for (it = LesPassagers.begin(); it != LesPassagers.end(); it++)
+    {
         cout << (*it)->getNom() << (*it)->getPrenom() << (*it)->getCategorie() << endl;
     }
 }
-void Trajet::Affiche(){
+void Trajet::Affiche()
+{
     cout << "Trajet:" << this->getPortDepart() << this->getPortArrive() << endl;
     this->afficheEscales();
     this->affichePassagers();

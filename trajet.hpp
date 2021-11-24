@@ -9,13 +9,18 @@ using namespace std;
 
 class Passager;
 class Escales;
+class Billet;
+class Compagnie;
 class Trajet{
     vector<Escales*>escales;
     string portDepart, portArrive;
     vector<Passager*>LesPassagers;
+    Compagnie *c;
     //Date et Temps
     public:
         Trajet(string, string);
+        void ajoutEscales(Escales *);
+        void ajoutPassager(Passager *);
         string getPortDepart();
         string getPortArrive();
         void setPortDepart(string);

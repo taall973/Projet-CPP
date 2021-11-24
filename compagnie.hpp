@@ -12,6 +12,7 @@ class Personnel;
 class Navire;
 class Billet;
 class Trajet;
+class Escales;
 class Compagnie{
     int Id;
     string Nom;
@@ -19,6 +20,7 @@ class Compagnie{
     static vector<Navire*>ToutNavires;
     static vector<Billet*>ToutBillets;
     static vector<Trajet*>ToutTrajets;
+    static vector<Escales*>ToutEscales;
     public:
         Compagnie(int, string);
         int getId();
@@ -31,6 +33,7 @@ class Compagnie{
         void AfficheNavires();
         void AfficheBillets();
         void AfficheTrajets();
+        void AfficheEscales();
 };
 
 #endif

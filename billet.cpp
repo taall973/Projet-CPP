@@ -10,6 +10,7 @@ Billet::Billet(int i, Passager*a, Trajet*n){
     p = a;
     t = n;
     c->AjoutBillets(this);
+    n->ajoutPassager(this);
 }
 Billet::~Billet(){}
 int Billet::getId(){

@@ -2,7 +2,7 @@
 #include "compagnie.hpp"
 
 using namespace std;
-vector<Personnel *> Compagnie::ToutPersonnels;
+
 
 Personnel::Personnel() {}
 Personnel::Personnel(int i, string n, string p)

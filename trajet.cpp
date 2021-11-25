@@ -6,11 +6,12 @@
 
 using namespace std;
 
-Trajet::Trajet(string pd, string pa, int pi)
+Trajet::Trajet(string pd, string pa, int pi, Navire *nav)
 {
     portDepart = pd;
     portArrive = pa;
     prixInitial = pi;
+    navire = nav;
     c->AjoutTrajet(this);
 }
 void Trajet::ajoutEscales(Escales *e)

@@ -11,6 +11,7 @@ class Passager;
 class Escales;
 class Billet;
 class Compagnie;
+class Capitaine;
 class Trajet
 {
     vector<Escales *> escales;
@@ -18,12 +19,13 @@ class Trajet
     vector<Passager *> LesPassagers;
     vector<Billet *> billets;
     Compagnie *c;
+    Navire *navire;
     string date;  //Format JJ/MM/AA
     string heure; //Format HH/MM
     int prixInitial;
 
 public:
-    Trajet(string, string, int);
+    Trajet(string, string, int, Navire *);
     void ajoutEscales(Escales *);
     void ajoutPassager(Passager *);
     string getPortDepart();
@@ -40,6 +42,9 @@ public:
     int getPrixInitial();
     vector<Billet *> getBillets();
     void ajouterBillet(Billet *);
+    Capitaine getEquipage();
+    //ajouter get matelots et seconds
+
 };
 
 #endif

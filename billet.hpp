@@ -20,7 +20,6 @@ class Billet
 
 public:
     Billet(int, Passager *, Trajet *);
-    ~Billet();
     int getId();
     void setId(int);
     int getPrixInitial();

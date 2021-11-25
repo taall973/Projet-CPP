@@ -12,9 +12,9 @@ Billet::Billet(int i, Passager *a, Trajet *n)
     t.push_back(n);
     c->AjoutBillets(this);
     n->ajoutPassager(a);
+    PrixInitial = n->getPrixInitial();
 }
 
-Billet::~Billet() {}
 int Billet::getId()
 {
     return Id;

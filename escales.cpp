@@ -1,28 +1,41 @@
-#include"escales.hpp"
+#include "escales.hpp"
 
 using namespace std;
-vector <Escales*>Escales::ToutEscales;
-vector<Escales*>::iterator it;
+vector<Escales *> Escales::ToutEscales;
+vector<Escales *>::iterator it;
 
-Escales::Escales(int i, string n){
+Escales::Escales(int i, string n, int p)
+{
     Id = i;
     Nom = n;
+    prix = p;
     ToutEscales.push_back(this);
 }
-int Escales::getId(){
+int Escales::getId()
+{
     return Id;
 }
-string Escales::getNom(){
+string Escales::getNom()
+{
     return Nom;
 }
-void Escales::setId(int i){
+void Escales::setId(int i)
+{
     Id = i;
 }
-void Escales::setNom(string n){
+void Escales::setNom(string n)
+{
     Nom = n;
 }
-void Escales::Affiche(){
-    for(it = ToutEscales.begin(); it != ToutEscales.end(); it++){
+void Escales::Affiche()
+{
+    for (it = ToutEscales.begin(); it != ToutEscales.end(); it++)
+    {
         cout << (*it)->getNom();
     }
+}
+
+int Escales::getPrix()
+{
+    return prix;
 }

@@ -51,3 +51,6 @@ void Navire::setMaxMatelots(int mm){
 void Navire::setCapitaine(Capitaine * cap){
     c = cap;
 }
+void Navire::ajoutCompagnie(Compagnie *c){
+    compagnie = c;
+}

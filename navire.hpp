@@ -20,7 +20,7 @@ class Navire
     Capitaine *c;
     list<Second *> Seconds;
     list<Matelot *> Matelots;
-    Compagnie *Compagnie;
+    Compagnie *compagnie;
 
 public:
     Navire(int, string);
@@ -38,6 +38,7 @@ public:
     void setMaxSeconds(int);
     void setMaxMatelots(int);
     void setCapitaine(Capitaine *);
+    void ajoutCompagnie(Compagnie *);
 };
 
 class NavireFret : public Navire

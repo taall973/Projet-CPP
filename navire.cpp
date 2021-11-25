@@ -1,56 +1,91 @@
-#include"navire.hpp"
+#include "navire.hpp"
 #include "compagnie.hpp"
-#include"personnel.hpp"
+#include "personnel.hpp"
 
 using namespace std;
-        
-Navire::Navire(int i, string n){
+
+Navire::Navire(int i, string n)
+{
     Id = i;
     Nom = n;
-    Compagnie->AjoutNavire(this);
+    compagnie->AjoutNavire(this);
 }
-int Navire::getId(){
+int Navire::getId()
+{
     return Id;
 }
-string Navire::getNom(){
+string Navire::getNom()
+{
     return Nom;
 }
-int Navire::getTonnage(){
+int Navire::getTonnage()
+{
     return Tonnage;
 }
-int Navire::getCapaciteMarchandise(){
+int Navire::getCapaciteMarchandise()
+{
     return CapaciteMarchandise;
 }
-int Navire::getMaxSeconds(){
+int Navire::getMaxSeconds()
+{
     return MaxSeconds;
 }
-int Navire::getMaxMatelots(){
+int Navire::getMaxMatelots()
+{
     return MaxMatelots;
 }
-Capitaine Navire::getCapitaine(){
+Capitaine Navire::getCapitaine()
+{
     return *c;
 }
-void Navire::setId(int i){
+void Navire::setId(int i)
+{
     Id = i;
 }
-void Navire::setNom(string n){
+void Navire::setNom(string n)
+{
     Nom = n;
 }
-void Navire::setTonnage(int t){
+void Navire::setTonnage(int t)
+{
     Tonnage = t;
 }
-void Navire::setCapaciteMarchandise(int c){
+void Navire::setCapaciteMarchandise(int c)
+{
     CapaciteMarchandise = c;
 }
-void Navire::setMaxSeconds(int ms){
+void Navire::setMaxSeconds(int ms)
+{
     MaxSeconds = ms;
 }
-void Navire::setMaxMatelots(int mm){
+void Navire::setMaxMatelots(int mm)
+{
     MaxMatelots = mm;
 }
-void Navire::setCapitaine(Capitaine * cap){
+void Navire::setCapitaine(Capitaine *cap)
+{
     c = cap;
 }
-void Navire::ajoutCompagnie(Compagnie *c){
+void Navire::ajoutCompagnie(Compagnie *c)
+{
     compagnie = c;
+}
+
+void Navire::ajoutPersonnel(Capitaine *cap, vector<Second *> s, vector<Matelot *> m)
+{
+    c = cap;
+    for (size_t i = 0; i < MaxSeconds; i++)
+    {
+        if (i < s.size())
+        {
+            Seconds.push_back(s[i]);
+        }
+    }
+    for (size_t i = 0; i < MaxMatelots; i++)
+    {
+        if (i < m.size())
+        {
+            Matelots.push_back(m[i]);
+        }
+    }
 }

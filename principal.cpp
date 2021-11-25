@@ -16,23 +16,21 @@
 using namespace std;
 
 int main(void){
-    Compagnie *compagnie;
-    compagnie = new Compagnie(1, "Spirit Waterways");
+    Compagnie compagnie(1, "Spirit Waterways");
 
     cout << "1" << endl;
 
-    NavireFret *nav3;
-
+    cout << compagnie.getNom() << endl;
     Capitaine *c1;
     c1->setNom("Jack");
 
     Navire nav1(1, "Titanic");
     nav1.setCapitaine(c1);
 
-    compagnie->AjoutNavire(&nav1);
+    compagnie.AjoutNavire(&nav1);
     
-    compagnie->AfficheNavires();
-    compagnie->AffichePersonnels();
+    compagnie.AfficheNavires();
+    compagnie.AffichePersonnels();
 
     
 

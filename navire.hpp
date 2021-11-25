@@ -39,6 +39,7 @@ public:
     void setMaxMatelots(int);
     void setCapitaine(Capitaine *);
     void ajoutCompagnie(Compagnie *);
+    void ajoutPersonnel(Capitaine *, vector<Second *>, vector<Matelot *>);
 };
 
 class NavireFret : public Navire
@@ -49,7 +50,7 @@ public:
 
 class NavirePassager : public Navire
 {
-    
+
 public:
     NavirePassager();
 };

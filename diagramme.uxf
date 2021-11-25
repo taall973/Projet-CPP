@@ -14,9 +14,9 @@
 - capacite_marchandise : int
 - secondMax : int
 - matelotMax : int</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>880</x><y>480</y><w>200</w><h>50</h></coordinates><panel_attributes>lt=-
-m1=1
-m2=0..1
-teaches to &gt;</panel_attributes><additional_attributes>10;20;180;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1020</x><y>170</y><w>180</w><h>160</h></coordinates><panel_attributes>Compagnie
+m1=*
+m2=1
+concerne</panel_attributes><additional_attributes>10;20;180;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1020</x><y>170</y><w>180</w><h>160</h></coordinates><panel_attributes>Compagnie
 --
 - id : int
 - nom : string
@@ -66,9 +66,9 @@ static vector&lt;Escale *&gt; escales</panel_attributes><additional_attributes><
 m1=*
 m2=*
 teaches to &gt;</panel_attributes><additional_attributes>10;10;10;200</additional_attributes></element><element><id>Relation</id><coordinates><x>850</x><y>230</y><w>190</w><h>190</h></coordinates><panel_attributes>lt=-
-m1=*
+m1=1
 m2=*
-teaches to &gt;</panel_attributes><additional_attributes>170;20;10;20;10;170</additional_attributes></element><element><id>Relation</id><coordinates><x>510</x><y>0</y><w>530</w><h>420</h></coordinates><panel_attributes>lt=-
+archive</panel_attributes><additional_attributes>170;20;10;20;10;170</additional_attributes></element><element><id>Relation</id><coordinates><x>510</x><y>0</y><w>530</w><h>420</h></coordinates><panel_attributes>lt=-
 m1=*
 m2=*
 teaches to &gt;</panel_attributes><additional_attributes>510;210;420;210;420;10;10;10;10;400</additional_attributes></element><element><id>Relation</id><coordinates><x>1190</x><y>210</y><w>470</w><h>130</h></coordinates><panel_attributes>lt=-

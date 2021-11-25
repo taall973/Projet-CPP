@@ -15,7 +15,7 @@ Trajet::Trajet(string pd, string pa, int pi)
 }
 void Trajet::ajoutEscales(Escales *e)
 {
-    prixInitial+=e->getPrix();
+    prixInitial += e->getPrix();
     escales.push_back(e);
 }
 void Trajet::ajoutPassager(Passager *p)
@@ -82,3 +82,7 @@ void Trajet::Affiche()
     this->affichePassagers();
 }
 
+int Trajet::getPrixInitial()
+{
+    return prixInitial;
+}

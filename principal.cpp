@@ -6,6 +6,14 @@
 #include"navire.hpp"
 #include"escales.hpp"
 
+#include"compagnie.cpp"
+#include"passager.cpp"
+#include"personnel.cpp"
+#include"trajet.cpp"
+#include"billet.cpp"
+#include"navire.cpp"
+#include"escales.cpp"
+
 #include"iostream"
 #include"string"
 #include"vector"
@@ -15,18 +23,14 @@ using namespace std;
 
 int main(void){
     Compagnie *compagnie;
-    compagnie = new(1, "Spirit Waterways");
+    compagnie = new Compagnie(1, "Spirit Waterways");
 
-    NavirePassager *nav1, *nav2;
     NavireFret *nav3;
 
     Capitaine *c1;
-    c1 = new Personnel();
     c1->setNom("Jack");
 
-    nav1 = new Navire();
-    nav1->setId(1); 
-    nav1->setNom("Titanic");
+    Navire nav1(1, "Titanic")
     nav1->setCapitaine(c1);
 
     compagnie->AfficheNavires();

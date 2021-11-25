@@ -56,7 +56,7 @@ void Compagnie::AfficheBillets(){
 }
 void Compagnie::AfficheTrajets(){
     for(itt = ToutTrajets.begin(); itt != ToutTrajets.end(); it++){
-        cout << (*itt)->Affiche();
+        (*itt)->Affiche();
     }
 }
 

@@ -15,7 +15,7 @@ class Billet
     int Id;
     int PrixInitial;
     Passager *p;
-    Trajet *t;
+    vector<Trajet *> t;
     Compagnie *c;
 
 public:
@@ -27,7 +27,8 @@ public:
     void setPrixInitial(int);
     void Affiche();
     Passager getPassager();
-    Trajet getTrajet();
+    vector<Trajet *> getTrajet();
+    void ajoutTrajet(Trajet *);
 };
 
 #endif

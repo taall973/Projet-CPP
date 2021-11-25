@@ -9,7 +9,7 @@ Billet::Billet(int i, Passager *a, Trajet *n)
 {
     Id = i;
     p = a;
-    t = n;
+    t.push_back(n);
     c->AjoutBillets(this);
     n->ajoutPassager(a);
 }
@@ -39,7 +39,12 @@ Passager Billet::getPassager()
 {
     return *p;
 }
-Trajet Billet::getTrajet()
+vector<Trajet *> Billet::getTrajet()
 {
-    return *t;
+    return t;
+}
+
+void Billet::ajoutTrajet(Trajet *trajet)
+{
+    t.push_back(trajet);
 }

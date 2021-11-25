@@ -38,6 +38,17 @@ Capitaine Navire::getCapitaine()
 {
     return *c;
 }
+
+vector<Second *> Navire::getSeconds()
+{
+    return Seconds;
+}
+
+vector<Matelot *> Navire::getMatelots()
+{
+    return Matelots;
+}
+
 void Navire::setId(int i)
 {
     Id = i;

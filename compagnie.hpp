@@ -29,6 +29,7 @@ class Compagnie{
         void AjoutNavire(Navire *);
         void AjoutBillets(Billet *);
         void AjoutTrajet(Trajet *);
+        void AjoutEscales(Escales *);
         void AffichePersonnels();
         void AfficheNavires();
         void AfficheBillets();

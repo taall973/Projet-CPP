@@ -40,6 +40,9 @@ void Compagnie::AjoutBillets(Billet *b){
 void Compagnie::AjoutTrajet(Trajet *t){
     ToutTrajets.push_back(t);
 }
+void Compagnie::AjoutEscales(Escales *e){
+    ToutEscales.push_back(e);
+}
 void Compagnie::AffichePersonnels(){
     for(itp = ToutPersonnels.begin(); itp != ToutPersonnels.end(); itp++){
         cout << (*itp)->getNom() << (*itp)->getPrenom() << endl;
@@ -53,6 +56,7 @@ void Compagnie::AfficheNavires(){
 void Compagnie::AfficheBillets(){
     for(itb = ToutBillets.begin(); itb != ToutBillets.end(); itb++){
         //cout << (*itb)->getPassager()->getNom() << (*itb)->getTrajet() << endl;
+        (*itb)->Affiche();
     }
 }
 void Compagnie::AfficheTrajets(){

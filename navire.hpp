@@ -18,8 +18,8 @@ class Navire
     string Nom;
     int Tonnage, CapaciteMarchandise, MaxSeconds, MaxMatelots;
     Capitaine *c;
-    list<Second *> Seconds;
-    list<Matelot *> Matelots;
+    vector<Second *> Seconds;
+    vector<Matelot *> Matelots;
     Compagnie *compagnie;
 
 public:
@@ -31,6 +31,8 @@ public:
     int getMaxSeconds();
     int getMaxMatelots();
     Capitaine getCapitaine();
+    vector<Second *> getSeconds();
+    vector<Matelot *> getMatelots();
     void setId(int);
     void setNom(string);
     void setTonnage(int);

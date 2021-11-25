@@ -13,6 +13,7 @@ Billet::Billet(int i, Passager *a, Trajet *n)
     c->AjoutBillets(this);
     n->ajoutPassager(a);
     PrixInitial = n->getPrixInitial();
+    n->ajouterBillet(this);
 }
 
 int Billet::getId()

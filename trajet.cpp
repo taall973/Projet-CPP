@@ -86,3 +86,13 @@ int Trajet::getPrixInitial()
 {
     return prixInitial;
 }
+
+vector<Billet *> Trajet::getBillets()
+{
+    return billets;
+}
+
+void Trajet::ajouterBillet(Billet *b)
+{
+    billets.push_back(b);
+}

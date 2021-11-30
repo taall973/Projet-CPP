@@ -5,12 +5,6 @@
 #include "trajet.hpp"
 #include "escales.hpp"
 
-vector<Personnel *> Compagnie::toutPersonnels;
-vector<Navire *> Compagnie::toutNavires;
-vector<Billet *> Compagnie::toutBillets;
-vector<Trajet *> Compagnie::toutTrajets;
-vector<Escales *> Compagnie::toutEscales;
-
 vector<Personnel *>::iterator itp;
 vector<Navire *>::iterator itn;
 vector<Billet *>::iterator itb;

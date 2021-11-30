@@ -14,12 +14,12 @@ class Matelot;
 class Compagnie;
 class Navire
 {
-    int Id;
-    string Nom;
-    int Tonnage, CapaciteMarchandise, MaxSeconds, MaxMatelots;
-    Capitaine *c;
-    vector<Second *> Seconds;
-    vector<Matelot *> Matelots;
+    int id;
+    string nom;
+    int tonnage, capaciteMarchandise, maxSeconds, maxMatelots;
+    Capitaine *capitaine;
+    vector<Second *> seconds;
+    vector<Matelot *> matelots;
     Compagnie *compagnie;
 
 public:

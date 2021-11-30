@@ -14,13 +14,13 @@ class Billet;
 class Trajet;
 class Escales;
 class Compagnie{
-    int Id;
-    string Nom;
-    static vector<Personnel*>ToutPersonnels;
-    static vector<Navire*>ToutNavires;
-    static vector<Billet*>ToutBillets;
-    static vector<Trajet*>ToutTrajets;
-    static vector<Escales*>ToutEscales;
+    int id;
+    string nom;
+    static vector<Personnel*>toutPersonnels;
+    static vector<Navire*>toutNavires;
+    static vector<Billet*>toutBillets;
+    static vector<Trajet*>toutTrajets;
+    static vector<Escales*>toutEscales;
     public:
         Compagnie(int, string);
         int getId();

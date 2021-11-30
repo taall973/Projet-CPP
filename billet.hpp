@@ -12,11 +12,11 @@ class Trajet;
 class Compagnie;
 class Billet
 {
-    int Id;
-    int PrixInitial;
-    Passager *p;
-    vector<Trajet *> t;
-    Compagnie *c;
+    int id;
+    int prixInitial;
+    Passager *passager;
+    vector<Trajet *> trajets;
+    Compagnie *compagnie;
 
 public:
     Billet(int, Passager *, Trajet *);
@@ -26,7 +26,7 @@ public:
     void setPrixInitial(int);
     void Affiche();
     Passager getPassager();
-    vector<Trajet *> getTrajet();
+    vector<Trajet *> getTrajets();
     void ajoutTrajet(Trajet *);
 };
 

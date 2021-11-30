@@ -9,10 +9,10 @@ using namespace std;
 
 class Trajet;
 class Escales{
-    int Id;
+    int id;
     int prix;
-    string Nom;
-    static vector <Escales*>ToutEscales;
+    string nom;
+    static vector <Escales*>toutEscales;
     public:
         Escales(int, string, int);
         int getId();

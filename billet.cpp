@@ -5,47 +5,47 @@
 
 using namespace std;
 
-Billet::Billet(int i, Passager *a, Trajet *n)
+Billet::Billet(int i, Passager *p, Trajet *trajet)
 {
-    Id = i;
-    p = a;
-    t.push_back(n);
-    c->AjoutBillets(this);
-    n->ajoutPassager(a);
-    PrixInitial = n->getPrixInitial();
-    n->ajouterBillet(this);
+    id = i;
+    passager = p;
+    trajets.push_back(trajet);
+    compagnie->AjoutBillets(this);
+    trajet->ajoutPassager(passager);
+    prixInitial = trajet->getPrixInitial();
+    trajet->ajouterBillet(this);
 }
 
 int Billet::getId()
 {
-    return Id;
+    return id;
 }
 void Billet::setId(int i)
 {
-    Id = i;
+    id = i;
 }
 int Billet::getPrixInitial()
 {
-    return PrixInitial;
+    return prixInitial;
 }
 void Billet::setPrixInitial(int p)
 {
-    PrixInitial = p;
+    prixInitial = p;
 }
 void Billet::Affiche()
 {
-    cout << "Voyageur:" << p->getNom() << p->getPrenom(); //<< t->Affiche() << endl
+    cout << "Voyageur:" << passager->getNom() << passager->getPrenom(); //<< t->Affiche() << endl
 }
 Passager Billet::getPassager()
 {
-    return *p;
+    return *passager;
 }
-vector<Trajet *> Billet::getTrajet()
+vector<Trajet *> Billet::getTrajets()
 {
-    return t;
+    return trajets;
 }
 
 void Billet::ajoutTrajet(Trajet *trajet)
 {
-    t.push_back(trajet);
+    trajets.push_back(trajet);
 }

@@ -42,9 +42,11 @@ public:
     int getPrixInitial();
     vector<Billet *> getBillets();
     void ajouterBillet(Billet *);
-    Capitaine getEquipage();
-    //ajouter get matelots et seconds
+    Capitaine getCapitaine();
+    vector<Second *> getSeconds();
+    vector<Matelot *> getMatelots();
 
+    //ajouter get matelots et seconds
 };
 
 #endif

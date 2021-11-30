@@ -12,6 +12,9 @@ class Escales;
 class Billet;
 class Compagnie;
 class Capitaine;
+class Navire;
+class Second;
+class Matelot;
 class Trajet
 {
     vector<Escales *> escales;
@@ -42,11 +45,9 @@ public:
     int getPrixInitial();
     vector<Billet *> getBillets();
     void ajouterBillet(Billet *);
-    Capitaine getCapitaine();
+    Capitaine *getCapitaine();
     vector<Second *> getSeconds();
     vector<Matelot *> getMatelots();
-
-    //ajouter get matelots et seconds
 };
 
 #endif

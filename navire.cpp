@@ -34,9 +34,9 @@ int Navire::getMaxMatelots()
 {
     return MaxMatelots;
 }
-Capitaine Navire::getCapitaine()
+Capitaine *Navire::getCapitaine()
 {
-    return *c;
+    return c;
 }
 
 vector<Second *> Navire::getSeconds()

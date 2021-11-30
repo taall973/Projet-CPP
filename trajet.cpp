@@ -3,6 +3,7 @@
 #include "escales.hpp"
 #include "passager.hpp"
 #include "compagnie.hpp"
+#include "navire.hpp"
 
 using namespace std;
 
@@ -96,4 +97,19 @@ vector<Billet *> Trajet::getBillets()
 void Trajet::ajouterBillet(Billet *b)
 {
     billets.push_back(b);
+}
+
+Capitaine *Trajet::getCapitaine()
+{
+    return navire->getCapitaine();
+}
+
+vector<Second *> Trajet::getSeconds()
+{
+    return navire->getSeconds();
+}
+
+vector<Matelot *> Trajet::getMatelots()
+{
+    return navire->getMatelots();
 }

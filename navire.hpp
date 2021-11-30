@@ -30,7 +30,7 @@ public:
     int getCapaciteMarchandise();
     int getMaxSeconds();
     int getMaxMatelots();
-    Capitaine getCapitaine();
+    Capitaine *getCapitaine();
     vector<Second *> getSeconds();
     vector<Matelot *> getMatelots();
     void setId(int);

@@ -8,9 +8,9 @@ using namespace std;
 class Compagnie;
 class Personnel
 {
-    int Id;
-    string Nom, Prenom;
-    Compagnie *c;
+    int id;
+    string nom, prenom;
+    Compagnie *compagnie;
 
 public:
     Personnel();
@@ -23,7 +23,7 @@ public:
 
 class Capitaine : public Personnel
 {
-    string Role;
+    string role;
 
 public:
     Capitaine();
@@ -31,7 +31,7 @@ public:
 
 class Second : public Personnel
 {
-    string Role;
+    string role;
 
 public:
     Second();
@@ -39,7 +39,7 @@ public:
 
 class Matelot : public Personnel
 {
-    string Role;
+    string role;
 
 public:
     Matelot();

@@ -19,9 +19,9 @@ class Trajet
 {
     vector<Escales *> escales;
     string portDepart, portArrive;
-    vector<Passager *> LesPassagers;
+    vector<Passager *> passagers;
     vector<Billet *> billets;
-    Compagnie *c;
+    Compagnie *compagnie;
     Navire *navire;
     string date;  //Format JJ/MM/AA
     string heure; //Format HH/MM

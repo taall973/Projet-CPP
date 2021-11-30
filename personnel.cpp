@@ -6,39 +6,39 @@ using namespace std;
 Personnel::Personnel() {}
 Personnel::Personnel(int i, string n, string p)
 {
-    Id = i;
-    Nom = n;
-    Prenom = p;
-    c->AjoutPersonnel(this);
+    id = i;
+    nom = n;
+    prenom = p;
+    compagnie->AjoutPersonnel(this);
 }
 string Personnel::getNom()
 {
-    return Nom;
+    return nom;
 }
 string Personnel::getPrenom()
 {
-    return Prenom;
+    return prenom;
 }
 void Personnel::setNom(string n)
 {
-    Nom = n;
+    nom = n;
 }
 void Personnel::setPrenom(string p)
 {
-    Prenom = p;
+    prenom = p;
 }
 
 Capitaine::Capitaine()
 {
-    Role = "Capitaine";
+    role = "Capitaine";
 }
 
 Second::Second()
 {
-    Role = "Second";
+    role = "Second";
 }
 
 Matelot::Matelot()
 {
-    Role = "Matelot";
+    role = "Matelot";
 }

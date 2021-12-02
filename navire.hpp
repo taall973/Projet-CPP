@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 #include <list>
+
 using namespace std;
 
 class Personnel;
@@ -23,7 +24,9 @@ class Navire
     Compagnie *compagnie;
 
 public:
+    Navire();
     Navire(int, string);
+    ~Navire();
     int getId();
     string getNom();
     int getTonnage();
@@ -40,7 +43,7 @@ public:
     void setMaxSeconds(int);
     void setMaxMatelots(int);
     void setCapitaine(Capitaine *);
-    void ajoutCompagnie(Compagnie *);
+    void setCompagnie(Compagnie *);
     void ajoutPersonnel(Capitaine *, vector<Second *>, vector<Matelot *>);
 };
 

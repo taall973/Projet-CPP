@@ -6,6 +6,7 @@
 #include <vector>
 
 using namespace std;
+
 class Billet;
 class Passager
 {

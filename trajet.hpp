@@ -29,6 +29,7 @@ class Trajet
 
 public:
     Trajet(string, string, int, Navire *);
+    ~Trajet();
     void ajoutEscales(Escales *);
     void ajoutPassager(Passager *);
     string getPortDepart();

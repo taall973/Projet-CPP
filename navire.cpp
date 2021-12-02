@@ -4,12 +4,14 @@
 
 using namespace std;
 
+Navire::Navire(){}
 Navire::Navire(int i, string n)
 {
     id = i;
     nom = n;
     compagnie->AjoutNavire(this);
 }
+Navire::~Navire(){}
 int Navire::getId()
 {
     return id;
@@ -77,11 +79,10 @@ void Navire::setCapitaine(Capitaine *cap)
 {
     capitaine = cap;
 }
-void Navire::ajoutCompagnie(Compagnie *c)
+void Navire::setCompagnie(Compagnie *c)
 {
     compagnie = c;
 }
-
 void Navire::ajoutPersonnel(Capitaine *cap, vector<Second *> s, vector<Matelot *> m)
 {
     capitaine = cap;

@@ -15,7 +15,7 @@ Billet::Billet(int i, Passager *p, Trajet *trajet)
     prixInitial = trajet->getPrixInitial();
     trajet->ajouterBillet(this);
 }
-
+Billet::~Billet(){}
 int Billet::getId()
 {
     return id;

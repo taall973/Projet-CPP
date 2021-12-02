@@ -15,6 +15,7 @@ Trajet::Trajet(string pd, string pa, int pi, Navire *nav)
     navire = nav;
     compagnie->AjoutTrajet(this);
 }
+Trajet::~Trajet(){}
 void Trajet::ajoutEscales(Escales *e)
 {
     prixInitial += e->getPrix();

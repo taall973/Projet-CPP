@@ -16,6 +16,7 @@ class Trajet;
 class Escales;
 class Compagnie
 {
+    
     int id;
     string nom;
     vector<Passager *> passagers;
@@ -27,6 +28,7 @@ class Compagnie
 
 public:
     Compagnie(int, string);
+    ~Compagnie();
     int getId();
     string getNom();
     void AjoutPersonnel(Personnel *);

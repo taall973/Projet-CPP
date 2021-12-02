@@ -5,7 +5,7 @@ using namespace std;
 Date::Date(int h, int m, int s) : hh(h % 24), mm(m % 60), ss(s % 60)
 {
 }
-
+Date::~Date(){}
 int Date::getHH()
 {
     return hh;

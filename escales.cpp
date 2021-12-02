@@ -1,6 +1,8 @@
 #include "escales.hpp"
+#include "trajet.hpp"
 
 using namespace std;
+
 vector<Escales *> Escales::toutEscales;
 vector<Escales *>::iterator it;
 
@@ -11,6 +13,7 @@ Escales::Escales(int i, string n, int p)
     prix = p;
     toutEscales.push_back(this);
 }
+Escales::~Escales(){}
 int Escales::getId()
 {
     return id;

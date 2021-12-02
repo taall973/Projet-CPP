@@ -15,6 +15,7 @@ class Escales{
     static vector <Escales*>toutEscales;
     public:
         Escales(int, string, int);
+        ~Escales();
         int getId();
         string getNom();
         void setId(int);

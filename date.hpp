@@ -14,6 +14,7 @@ private:
 
 public:
     Date(int h = 0, int m = 0, int s = 0);
+    ~Date();
     int getHH();
     int getMM();
     int getSS();

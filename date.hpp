@@ -5,6 +5,8 @@
 #include <iostream>
 #include <vector>
 
+using namespace std;
+
 class Date
 {
 private:
@@ -12,6 +14,11 @@ private:
 
 public:
     Date(int h = 0, int m = 0, int s = 0);
+    int getHH();
+    int getMM();
+    int getSS();
+    friend bool operator==(Date const &d1, Date const &d2);
+    friend ostream &operator<<(ostream flux, Date const &d);
 };
 
 #endif

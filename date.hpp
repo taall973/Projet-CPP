@@ -11,7 +11,7 @@ private:
     int hh, mm, ss;
 
 public:
-    Date(int hh = 0, int mm = 0, int ss = 0);
+    Date(int h = 0, int m = 0, int s = 0);
 };
 
 #endif

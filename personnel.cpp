@@ -27,6 +27,9 @@ string Personnel::getPrenom()
 {
     return prenom;
 }
+string Personnel::getCompagnie(){
+    return compagnie->getNom();
+}
 void Personnel::setId(int i){
     id = i;
 }

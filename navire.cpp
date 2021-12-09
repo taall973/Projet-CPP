@@ -5,10 +5,11 @@
 using namespace std;
 
 Navire::Navire(){}
-Navire::Navire(int i, string n)
+Navire::Navire(int i, string n, Compagnie *c)
 {
     id = i;
     nom = n;
+    compagnie = c;
     compagnie->AjoutNavire(this);
 }
 Navire::~Navire(){}

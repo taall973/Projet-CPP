@@ -16,26 +16,33 @@ using namespace std;
 int main()
 {
     Compagnie compagnie(101, "Spirit Waterways");
+    string Escales[6] = {};
 
-    cout << compagnie.getNom() << endl;
-    Personnel *c1;
-    c1 = new Capitaine();
-    c1->setNom("Jack");
-    c1->setId(47);
-    c1->setCompagnie(&compagnie);
+    //Création de Personnel
+    string Noms[6] = {"Jack", "Joel", "Poole", "Ryan", "Ethan", "Laine", "Harry", "Seth"};
+    Personnel *p = new Personnel[6];
+    for(int i = 0; i < 5; i++){
+        p[i].setCompagnie(&compagnie);
+        p[i].setId(i);
+        p[i].setNom(Noms[i]);
+    }
+    Capitaine *c1 = (Capitaine*) &p[0];
+    Second *s1 = (Second *) &p[1];
+    Matelot *m1 = (Matelot *) &p[2];
 
-    cout << c1->getId() << endl;
+    //cout << p[1].getId() << " " << p[1].getCompagnie() << " " << p[1].getNom() << endl;
+    cout << c1->getId() << " " << c1->getNom() << endl;
 
-    Navire nav1;
-    nav1.setCompagnie(&compagnie);
-    nav1.setId(1);
-    nav1.setNom("Titanic");
+    //Création de Navire
+    //Navire *nav = new Navire[3];
+    string NomsNav[3] = {"Titanic", "Liberty", "Spirit"};
+    Navire nav1(14, "Titanic", &compagnie);
+    Navire nav2(24, "Liberty", &compagnie);
+    Navire nav3(56, "Spirit", &compagnie);
 
     cout << nav1.getNom() << endl;
     
     //nav1.setCapitaine(&c1);
-
-    compagnie.AjoutNavire(&nav1);
 
     compagnie.AfficheNavires();
     compagnie.AffichePersonnels();

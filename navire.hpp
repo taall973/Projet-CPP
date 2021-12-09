@@ -25,7 +25,7 @@ class Navire
 
 public:
     Navire();
-    Navire(int, string);
+    Navire(int, string, Compagnie*);
     ~Navire();
     int getId();
     string getNom();

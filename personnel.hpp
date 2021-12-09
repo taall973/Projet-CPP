@@ -22,6 +22,7 @@ public:
     int getId();
     string getNom();
     string getPrenom();
+    string getCompagnie();
     void setId(int);
     void setNom(string);
     void setPrenom(string);

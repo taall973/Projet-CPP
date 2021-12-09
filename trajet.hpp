@@ -34,6 +34,7 @@ public:
     void ajoutPassager(Passager *);
     string getPortDepart();
     string getPortArrive();
+    Compagnie *getCompagnie();
     void setPortDepart(string);
     void setPortArrive(string);
     string getDate();

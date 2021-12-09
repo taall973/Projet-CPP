@@ -68,6 +68,10 @@ void Navire::setCapaciteMarchandise(int c)
 {
     capaciteMarchandise = c;
 }
+Compagnie *Navire::getCompagnie()
+{
+    return compagnie;
+}
 void Navire::setMaxSeconds(int ms)
 {
     maxSeconds = ms;
@@ -83,6 +87,12 @@ void Navire::setCapitaine(Capitaine *cap)
 void Navire::setCompagnie(Compagnie *c)
 {
     compagnie = c;
+}
+void Navire::ajouterSecond(Second * s){
+    seconds.push_back(s);
+}
+void Navire::ajouterMatelot(Matelot * m){
+    matelots.push_back(m);
 }
 void Navire::ajoutPersonnel(Capitaine *cap, vector<Second *> s, vector<Matelot *> m)
 {

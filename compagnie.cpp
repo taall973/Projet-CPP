@@ -30,12 +30,10 @@ string Compagnie::getNom()
 void Compagnie::AjoutPersonnel(Personnel *p)
 {
     toutPersonnels.push_back(p);
-    p->setCompagnie(this);
 }
 void Compagnie::AjoutNavire(Navire *n)
 {
     toutNavires.push_back(n);
-    n->setCompagnie(this);
 }
 void Compagnie::AjoutBillets(Billet *b)
 {
@@ -54,7 +52,7 @@ void Compagnie::AffichePersonnels()
     cout << "Personnels:" << endl;
     for (itp = toutPersonnels.begin(); itp != toutPersonnels.end(); itp++)
     {
-        cout << (*itp)->getNom() << (*itp)->getPrenom() << endl;
+        cout << (*itp)->getNom() << " " << (*itp)->getPrenom() << endl;
     }
 }
 void Compagnie::AfficheNavires()

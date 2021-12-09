@@ -10,6 +10,7 @@ Billet::Billet(int i, Passager *p, Trajet *trajet)
     id = i;
     passager = p;
     trajets.push_back(trajet);
+    compagnie = trajet->getCompagnie();
     compagnie->AjoutBillets(this);
     trajet->ajoutPassager(passager);
     prixInitial = trajet->getPrixInitial();

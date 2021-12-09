@@ -31,6 +31,7 @@ public:
     string getNom();
     int getTonnage();
     int getCapaciteMarchandise();
+    Compagnie *getCompagnie();
     int getMaxSeconds();
     int getMaxMatelots();
     Capitaine *getCapitaine();
@@ -44,6 +45,8 @@ public:
     void setMaxMatelots(int);
     void setCapitaine(Capitaine *);
     void setCompagnie(Compagnie *);
+    void ajouterSecond(Second *);
+    void ajouterMatelot(Matelot *);
     void ajoutPersonnel(Capitaine *, vector<Second *>, vector<Matelot *>);
 };
 

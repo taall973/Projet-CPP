@@ -13,6 +13,7 @@ Trajet::Trajet(string pd, string pa, int pi, Navire *nav)
     portArrive = pa;
     prixInitial = pi;
     navire = nav;
+    compagnie = nav->getCompagnie();
     compagnie->AjoutTrajet(this);
 }
 Trajet::~Trajet(){}
@@ -32,6 +33,9 @@ string Trajet::getPortDepart()
 string Trajet::getPortArrive()
 {
     return portArrive;
+}
+Compagnie *Trajet::getCompagnie(){
+    return compagnie;
 }
 void Trajet::setPortDepart(string pd)
 {
@@ -75,13 +79,14 @@ void Trajet::affichePassagers()
     vector<Passager *>::iterator it;
     for (it = passagers.begin(); it != passagers.end(); it++)
     {
-        cout << (*it)->getNom() << (*it)->getPrenom() << (*it)->getCategorie() << endl;
+        cout << (*it)->getNom() << " " << (*it)->getPrenom() << (*it)->getCategorie() << endl;
     }
 }
 void Trajet::Affiche()
 {
-    cout << "Trajet:" << this->getPortDepart() << this->getPortArrive() << endl;
+    cout << "Depart:" << this->getPortDepart() << ", "<< "Arrivé:" << this->getPortArrive() << endl;
     this->afficheEscales();
+    cout << "Passagers:" << endl;
     this->affichePassagers();
 }
 

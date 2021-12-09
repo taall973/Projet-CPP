@@ -16,7 +16,8 @@ Personnel::Personnel(int i, string n, string p)
     compagnie->AjoutPersonnel(this);
 }
 Personnel::~Personnel(){}
-int Personnel::getId(){
+int Personnel::getId()
+{
     return id;
 }
 string Personnel::getNom()
@@ -27,7 +28,8 @@ string Personnel::getPrenom()
 {
     return prenom;
 }
-string Personnel::getCompagnie(){
+string Personnel::getCompagnie()
+{
     return compagnie->getNom();
 }
 void Personnel::setId(int i){
@@ -44,6 +46,7 @@ void Personnel::setPrenom(string p)
 void Personnel::setCompagnie(Compagnie* c)
 {
     compagnie = c;
+    c->AjoutPersonnel(this);
 }
 
 Capitaine::Capitaine()

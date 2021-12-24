@@ -5,6 +5,9 @@
 #include <string>
 #include <vector>
 
+#include "billet.hpp"
+#include "trajet.hpp"
+
 using namespace std;
 
 class Billet;

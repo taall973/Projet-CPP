@@ -5,6 +5,8 @@
 #include <string>
 #include <vector>
 
+#include "compagnie.hpp"
+
 using namespace std;
 
 class Compagnie;
@@ -31,7 +33,6 @@ public:
 
 class Capitaine : public Personnel
 {
-    string role;
 
 public:
     Capitaine();
@@ -39,7 +40,6 @@ public:
 
 class Second : public Personnel
 {
-    string role;
 
 public:
     Second();
@@ -47,7 +47,6 @@ public:
 
 class Matelot : public Personnel
 {
-    string role;
 
 public:
     Matelot();

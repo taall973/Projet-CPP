@@ -5,6 +5,8 @@
 #include<string>
 #include<vector>
 
+#include "trajet.hpp"
+
 using namespace std;
 
 class Trajet;

@@ -1,6 +1,4 @@
 #include "navire.hpp"
-#include "compagnie.hpp"
-#include "personnel.hpp"
 
 using namespace std;
 
@@ -92,27 +90,27 @@ void Navire::setCompagnie(Compagnie *c)
 }
 void Navire::ajouterSecond(Second *s)
 {
-    seconds.push_back(s);
+    if (seconds.size() <= maxSeconds)
+    {
+        seconds.push_back(s);
+    }
 }
 void Navire::ajouterMatelot(Matelot *m)
 {
-    matelots.push_back(m);
+    if (matelots.size() <= maxMatelots)
+    {
+        matelots.push_back(m);
+    }
 }
 void Navire::ajoutPersonnel(Capitaine *cap, vector<Second *> s, vector<Matelot *> m)
 {
     capitaine = cap;
-    for (size_t i = 0; i < maxSeconds; i++)
+    for (size_t i = 0; i < s.size(); i++)
     {
-        if (i < s.size())
-        {
-            seconds.push_back(s[i]);
-        }
+        this->ajouterSecond(s[i]);
     }
-    for (size_t i = 0; i < maxMatelots; i++)
+    for (size_t i = 0; i < m.size(); i++)
     {
-        if (i < m.size())
-        {
-            matelots.push_back(m[i]);
-        }
+        this->ajouterMatelot(m[i]);
     }
 }

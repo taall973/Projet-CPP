@@ -1,9 +1,4 @@
 #include "compagnie.hpp"
-#include "personnel.hpp"
-#include "navire.hpp"
-#include "billet.hpp"
-#include "trajet.hpp"
-#include "escales.hpp"
 
 using namespace std;
 

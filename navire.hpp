@@ -6,6 +6,9 @@
 #include <vector>
 #include <list>
 
+#include "compagnie.hpp"
+#include "personnel.hpp"
+
 using namespace std;
 
 class Trajet;

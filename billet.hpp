@@ -5,6 +5,10 @@
 #include <string>
 #include <vector>
 
+#include "passager.hpp"
+#include "trajet.hpp"
+#include "compagnie.hpp"
+
 using namespace std;
 
 class Passager;

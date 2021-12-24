@@ -1,5 +1,4 @@
 #include "personnel.hpp"
-#include "compagnie.hpp"
 
 using namespace std;
 
@@ -47,19 +46,4 @@ void Personnel::setCompagnie(Compagnie* c)
 {
     compagnie = c;
     c->AjoutPersonnel(this);
-}
-
-Capitaine::Capitaine()
-{
-    role = "Capitaine";
-}
-
-Second::Second()
-{
-    role = "Second";
-}
-
-Matelot::Matelot()
-{
-    role = "Matelot";
 }

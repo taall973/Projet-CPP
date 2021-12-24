@@ -1,7 +1,4 @@
 #include "passager.hpp"
-#include "billet.hpp"
-#include "trajet.hpp"
-#include <vector>
 
 using namespace std;
 

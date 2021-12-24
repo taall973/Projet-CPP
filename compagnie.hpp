@@ -6,6 +6,12 @@
 #include <vector>
 #include <list>
 
+#include "personnel.hpp"
+#include "navire.hpp"
+#include "billet.hpp"
+#include "trajet.hpp"
+#include "escales.hpp"
+
 using namespace std;
 
 class Passager;

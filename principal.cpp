@@ -63,7 +63,7 @@ int main()
     compagnie.AfficheTrajets();
     compagnie.AfficheBillets();
 
-    Date d1(22, 55, 22), d2(14,22,22);
+    Date d1(22444, 54455, 25542);
 
     //d1 = d2;
 

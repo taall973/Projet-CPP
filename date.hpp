@@ -18,6 +18,7 @@ public:
     int getMM();
     int getSS();
     friend bool operator==(Date const &d1, Date const &d2);
+    friend ostream &operator<<(ostream &flux, Date const &d);
     void afficher(ostream &flux) const;
 };
 

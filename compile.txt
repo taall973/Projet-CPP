@@ -1,1 +1,1 @@
-g++ compagnie.cpp billet.cpp escales.cpp navire.cpp passager.cpp personnel.cpp trajet.cpp principal.cpp -o main
+g++ compagnie.cpp billet.cpp escales.cpp navire.cpp passager.cpp personnel.cpp trajet.cpp date.cpp principal.cpp -o main

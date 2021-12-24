@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Date::Date(int j, int mo, int a, int h, int m, int s) : jour(j % 31), mois(m % 12), an(a), hh(h % 24), mm(m % 60), ss(s % 60)
+Date::Date(int j, int mo, int a, int h, int m, int s) : jour(j % 31), mois(m % 12), an(a % 9999), hh(h % 24), mm(m % 60), ss(s % 60)
 {
 }
 

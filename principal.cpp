@@ -50,7 +50,11 @@ int main()
     Escales es3(33, "Brighton", 60);
 
     //Création de Trajets
-    Trajet tr1(es1.getNom(), es3.getNom(), 100, &nav1);
+
+    Date d1(25, 45, 500, 22444, 54455, 25542);
+    Date d2(85, 4445, 55300, 252444, 5554455, 285542);
+
+    Trajet tr1(es1.getNom(), es3.getNom(), 100, &nav1, &d1, &d2);
 
     //Création de Passagers
     Passager pass1(4, Noms[4], Noms[5], "Insulaire");
@@ -63,8 +67,6 @@ int main()
     compagnie.AffichePersonnels();
     compagnie.AfficheTrajets();
     compagnie.AfficheBillets();
-
-    Date d1(25,45,500,22444, 54455, 25542);
 
     //d1 = d2;
 

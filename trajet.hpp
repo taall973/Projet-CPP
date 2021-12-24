@@ -31,11 +31,11 @@ class Trajet
     vector<Billet *> billets;
     Compagnie *compagnie;
     Navire *navire;
-    Date dateD, dateA; //Format JJ/MM/AA
+    Date *dateD, *dateA; //Format JJ/MM/AA HH:MM:SS
     int prix;
 
 public:
-    Trajet(string, string, int, Navire *, Date, Date);
+    Trajet(string, string, int, Navire *, Date *, Date *);
     ~Trajet();
     void ajoutEscales(Escales *);
     void ajoutPassager(Passager *);
@@ -44,10 +44,10 @@ public:
     Compagnie *getCompagnie();
     void setPortDepart(string);
     void setPortArrive(string);
-    Date getDateD();
-    Date getDateA();
-    void setDateD(Date);
-    void setDateA(Date);
+    Date *getDateD();
+    Date *getDateA();
+    void setDateD(Date *);
+    void setDateA(Date *);
     void afficheEscales();
     void affichePassagers();
     void Affiche();

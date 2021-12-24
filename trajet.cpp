@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Trajet::Trajet(string pd, string pa, int pi, Navire *nav, Date depart, Date arrivee)
+Trajet::Trajet(string pd, string pa, int pi, Navire *nav, Date *depart, Date *arrivee)
 {
     portDepart = pd;
     portArrive = pa;
@@ -13,7 +13,9 @@ Trajet::Trajet(string pd, string pa, int pi, Navire *nav, Date depart, Date arri
     compagnie = nav->getCompagnie();
     compagnie->AjoutTrajet(this);
 }
+
 Trajet::~Trajet() {}
+
 void Trajet::ajoutEscales(Escales *e)
 {
     prix += e->getPrix();
@@ -44,22 +46,22 @@ void Trajet::setPortArrive(string pa)
     portArrive = pa;
 }
 
-Date Trajet::getDateD()
+Date *Trajet::getDateD()
 {
     return dateD;
 }
 
-Date Trajet::getDateA()
+Date *Trajet::getDateA()
 {
     return dateA;
 }
 
-void Trajet::setDateD(Date d)
+void Trajet::setDateD(Date *d)
 {
     dateD = d;
 }
 
-void Trajet::setDateA(Date d)
+void Trajet::setDateA(Date *d)
 {
     dateA = d;
 }
@@ -82,8 +84,8 @@ void Trajet::affichePassagers()
 }
 void Trajet::Affiche()
 {
-    cout << "Depart: " << this->getPortDepart() << ", "
-         << "Arrivee: " << this->getPortArrive() << ", Heure du départ: " << dateD << ", Heure d'arrivee: " << dateA << ", Prix:" << prix << endl;
+    cout << "Depart: " << this->getPortDepart() << " " << *dateD << ", "
+         << "Arrivee: " << this->getPortArrive() << " " << *dateA << ", Prix:" << prix << "€" << endl;
     this->afficheEscales();
     cout << "Passagers:" << endl;
     this->affichePassagers();

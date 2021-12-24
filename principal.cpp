@@ -63,11 +63,11 @@ int main()
     compagnie.AfficheTrajets();
     compagnie.AfficheBillets();
 
-    //Date d1(220, 555, 222), d2(14,22,22);
+    Date d1(22, 55, 22), d2(14,22,22);
 
     //d1 = d2;
 
-    //cout << d1 << endl;
+    cout << d1 << endl;
 
     return 0;
 }

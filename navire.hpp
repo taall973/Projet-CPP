@@ -19,15 +19,16 @@ class Matelot;
 class Compagnie;
 class Navire
 {
+protected:
     int id;
     string nom;
-    int tonnage, capaciteMarchandise, maxSeconds, maxMatelots;
+    int tonnage, capaciteMarchandise, maxSeconds, maxMatelots, capacitePassagers;
     vector<Trajet *> trajets;
     Compagnie *compagnie;
 
 public:
-    Navire(int id, string nom);
-    Navire(int id, string nom, Compagnie *compagnie);
+    Navire(int id, string nom, int tonnage, int capaciteMarchandise, int capacitePassagers = 0);
+    Navire(int id, string nom, int tonnage, int capaciteMarchandise, Compagnie *compagnie, int capacitePassagers = 0);
     int getId();
     string getNom();
     int getTonnage();
@@ -47,16 +48,15 @@ public:
 class NavireFret : public Navire
 {
 public:
-    NavireFret(int id, string nom);
-    NavireFret(int id, string nom, Compagnie *compagnie);
+    NavireFret(int id, string nom, int tonnage, int capaciteMarchandise);
+    NavireFret(int id, string nom, int tonnage, int capaciteMArchandise, Compagnie *compagnie);
 };
 
 class NavirePassager : public Navire
 {
-    int capacitePassagers;
 public:
-    NavirePassager(int id, string nom, int capacitePassagers);
-    NavirePassager(int id, string nom, Compagnie *compagnie, int capacitePassagers);
+    NavirePassager(int id, string nom, int tonnage, int capaciteMarchandise, int capacitePassagers);
+    NavirePassager(int id, string nom, int tonnage, int capaciteMarchandise, Compagnie *compagnie, int capacitePassagers);
 };
 
 #endif

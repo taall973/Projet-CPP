@@ -17,7 +17,7 @@ class Compagnie;
 class Billet
 {
     int id;
-    int prixInitial;
+    int prix;
     Passager *passager;
     vector<Trajet *> trajets;
     Compagnie *compagnie;

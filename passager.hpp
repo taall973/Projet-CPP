@@ -27,6 +27,7 @@ public:
     string getNom() const;
     string getPrenom() const;
     string getCategorie() const;
+    int getReduction();
     void getBillets();
     void setNom(string);
     void setPrenom(string);

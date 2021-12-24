@@ -33,6 +33,9 @@ class Trajet
     Navire *navire;
     Date *dateD, *dateA; //Format JJ/MM/AA HH:MM:SS
     int prix;
+    Capitaine *capitaine;
+    vector<Second *> seconds;
+    vector<Matelot *> matelots;
 
 public:
     Trajet(string, string, int, Navire *, Date *, Date *);
@@ -57,6 +60,10 @@ public:
     Capitaine *getCapitaine();
     vector<Second *> getSeconds();
     vector<Matelot *> getMatelots();
+    void setCapitaine(Capitaine *);
+    void ajouterSecond(Second *);
+    void ajouterMatelot(Matelot *);
+    void ajoutPersonnel(Capitaine *, vector<Second *>, vector<Matelot *>);
 };
 
 #endif

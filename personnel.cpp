@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Personnel::Personnel(){}
+Personnel::Personnel() {}
 Personnel::Personnel(Compagnie *c)
 {
     compagnie->AjoutPersonnel(this);
@@ -14,7 +14,7 @@ Personnel::Personnel(int i, string n, string p)
     prenom = p;
     compagnie->AjoutPersonnel(this);
 }
-Personnel::~Personnel(){}
+Personnel::~Personnel() {}
 int Personnel::getId()
 {
     return id;
@@ -31,7 +31,8 @@ string Personnel::getCompagnie()
 {
     return compagnie->getNom();
 }
-void Personnel::setId(int i){
+void Personnel::setId(int i)
+{
     id = i;
 }
 void Personnel::setNom(string n)
@@ -42,8 +43,26 @@ void Personnel::setPrenom(string p)
 {
     prenom = p;
 }
-void Personnel::setCompagnie(Compagnie* c)
+void Personnel::setCompagnie(Compagnie *c)
 {
     compagnie = c;
     c->AjoutPersonnel(this);
+}
+
+Capitaine::Capitaine(int max) : tonnageMax(max)
+{
+}
+
+Second::Second(int max) : tonnageMax(max)
+{
+}
+
+int Capitaine::getTonnage()
+{
+    return tonnageMax;
+}
+
+int Second::getTonnage()
+{
+    return tonnageMax;
 }

@@ -85,7 +85,7 @@ void Trajet::affichePassagers()
 void Trajet::Affiche()
 {
     cout << "Depart: " << this->getPortDepart() << " - " << *dateD << ", "
-         << "Arrivee: " << this->getPortArrive() << " - " << *dateA << ", Prix:" << prix << "€" << endl;
+         << "Arrivee: " << this->getPortArrive() << " - " << *dateA << ", Prix initial:" << prix << "€" << endl;
     this->afficheEscales();
     cout << "Passagers:" << endl;
     this->affichePassagers();
@@ -108,15 +108,50 @@ void Trajet::ajouterBillet(Billet *b)
 
 Capitaine *Trajet::getCapitaine()
 {
-    return navire->getCapitaine();
+    return capitaine;
 }
 
 vector<Second *> Trajet::getSeconds()
 {
-    return navire->getSeconds();
+    return seconds;
 }
 
 vector<Matelot *> Trajet::getMatelots()
 {
-    return navire->getMatelots();
+    return matelots;
+}
+
+void Trajet::setCapitaine(Capitaine *c)
+{
+    if (navire->getTonnage() <= c->getTonnage())
+    {
+        capitaine = c;
+    }
+}
+
+void Trajet::ajouterSecond(Second *s)
+{
+    if (seconds.size() <= navire->getMaxSeconds() && navire->getTonnage() < s->getTonnage())
+    {
+        seconds.push_back(s);
+    }
+}
+void Trajet::ajouterMatelot(Matelot *m)
+{
+    if (matelots.size() <= navire->getMaxMatelots())
+    {
+        matelots.push_back(m);
+    }
+}
+void Trajet::ajoutPersonnel(Capitaine *cap, vector<Second *> s, vector<Matelot *> m)
+{
+    capitaine = cap;
+    for (size_t i = 0; i < s.size(); i++)
+    {
+        this->ajouterSecond(s[i]);
+    }
+    for (size_t i = 0; i < m.size(); i++)
+    {
+        this->ajouterMatelot(m[i]);
+    }
 }

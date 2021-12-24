@@ -33,16 +33,18 @@ public:
 
 class Capitaine : public Personnel
 {
-
+    int tonnageMax;
 public:
-    Capitaine();
+    Capitaine(int);
+    int getTonnage();
 };
 
 class Second : public Personnel
 {
-
+    int tonnageMax;
 public:
-    Second();
+    Second(int);
+    int getTonnage();
 };
 
 class Matelot : public Personnel

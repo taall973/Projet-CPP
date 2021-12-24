@@ -12,7 +12,7 @@ Navire::Navire(int i, string n, Compagnie *c)
     compagnie = c;
     compagnie->AjoutNavire(this);
 }
-Navire::~Navire() {}
+
 int Navire::getId()
 {
     return id;
@@ -36,20 +36,6 @@ int Navire::getMaxSeconds()
 int Navire::getMaxMatelots()
 {
     return maxMatelots;
-}
-Capitaine *Navire::getCapitaine()
-{
-    return capitaine;
-}
-
-vector<Second *> Navire::getSeconds()
-{
-    return seconds;
-}
-
-vector<Matelot *> Navire::getMatelots()
-{
-    return matelots;
 }
 
 void Navire::setId(int i)
@@ -80,37 +66,23 @@ void Navire::setMaxMatelots(int mm)
 {
     maxMatelots = mm;
 }
-void Navire::setCapitaine(Capitaine *cap)
-{
-    capitaine = cap;
-}
 void Navire::setCompagnie(Compagnie *c)
 {
     compagnie = c;
 }
-void Navire::ajouterSecond(Second *s)
+
+NavireFret::NavireFret(int i, string n) : Navire(i, n)
 {
-    if (seconds.size() <= maxSeconds)
-    {
-        seconds.push_back(s);
-    }
 }
-void Navire::ajouterMatelot(Matelot *m)
+
+NavireFret::NavireFret(int i, string n, Compagnie *c) : Navire(i, n, c)
 {
-    if (matelots.size() <= maxMatelots)
-    {
-        matelots.push_back(m);
-    }
 }
-void Navire::ajoutPersonnel(Capitaine *cap, vector<Second *> s, vector<Matelot *> m)
+
+NavirePassager::NavirePassager(int i, string n, int c) : Navire(i, n), capacitePassagers(c)
 {
-    capitaine = cap;
-    for (size_t i = 0; i < s.size(); i++)
-    {
-        this->ajouterSecond(s[i]);
-    }
-    for (size_t i = 0; i < m.size(); i++)
-    {
-        this->ajouterMatelot(m[i]);
-    }
+}
+
+NavirePassager::NavirePassager(int i, string n, Compagnie *c, int cap) : Navire(i, n, c), capacitePassagers(cap)
+{
 }

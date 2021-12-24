@@ -22,16 +22,12 @@ class Navire
     int id;
     string nom;
     int tonnage, capaciteMarchandise, maxSeconds, maxMatelots;
-    vector<Trajet *>trajets;
-    Capitaine *capitaine;
-    vector<Second *> seconds;
-    vector<Matelot *> matelots;
+    vector<Trajet *> trajets;
     Compagnie *compagnie;
 
 public:
-    Navire(int, string);
-    Navire(int, string, Compagnie*);
-    ~Navire();
+    Navire(int id, string nom);
+    Navire(int id, string nom, Compagnie *compagnie);
     int getId();
     string getNom();
     int getTonnage();
@@ -39,34 +35,28 @@ public:
     Compagnie *getCompagnie();
     int getMaxSeconds();
     int getMaxMatelots();
-    Capitaine *getCapitaine();
-    vector<Second *> getSeconds();
-    vector<Matelot *> getMatelots();
     void setId(int);
     void setNom(string);
     void setTonnage(int);
     void setCapaciteMarchandise(int);
     void setMaxSeconds(int);
     void setMaxMatelots(int);
-    void setCapitaine(Capitaine *);
     void setCompagnie(Compagnie *);
-    void ajouterSecond(Second *);
-    void ajouterMatelot(Matelot *);
-    void ajoutPersonnel(Capitaine *, vector<Second *>, vector<Matelot *>);
-    void ajoutTrajet();
 };
 
 class NavireFret : public Navire
 {
 public:
-    NavireFret();
+    NavireFret(int id, string nom);
+    NavireFret(int id, string nom, Compagnie *compagnie);
 };
 
 class NavirePassager : public Navire
 {
-
+    int capacitePassagers;
 public:
-    NavirePassager();
+    NavirePassager(int id, string nom, int capacitePassagers);
+    NavirePassager(int id, string nom, Compagnie *compagnie, int capacitePassagers);
 };
 
 #endif

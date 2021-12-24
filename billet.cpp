@@ -10,7 +10,7 @@ Billet::Billet(int i, Passager *p, Trajet *trajet)
     compagnie = trajet->getCompagnie();
     compagnie->AjoutBillets(this);
     trajet->ajoutPassager(passager);
-    prixInitial = trajet->getPrixInitial();
+    prix = trajet->getPrixInitial() * p->getReduction();
     trajet->ajouterBillet(this);
 }
 
@@ -25,11 +25,11 @@ void Billet::setId(int i)
 }
 int Billet::getPrixInitial()
 {
-    return prixInitial;
+    return prix;
 }
 void Billet::setPrixInitial(int p)
 {
-    prixInitial = p;
+    prix = p;
 }
 void Billet::Affiche()
 {

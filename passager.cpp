@@ -10,7 +10,7 @@ Passager::Passager(int i, string n, string p, string c)
     categorie = c;
     if (categorie == "Insulaire")
     {
-        reduction = 0.75;
+        reduction = 0.25;
     }
     else if (categorie == "Insulaire secondaire")
     {
@@ -18,12 +18,12 @@ Passager::Passager(int i, string n, string p, string c)
     }
     else if (categorie == "Normal")
     {
-        reduction = 0;
+        reduction = 1;
     }
     else
     {
         categorie = "Normal";
-        reduction = 0;
+        reduction = 1;
     }
 }
 Passager::Passager(int i, string n, string p, string c, Billet *b)
@@ -35,7 +35,7 @@ Passager::Passager(int i, string n, string p, string c, Billet *b)
     billetPassager.push_back(b);
     if (categorie == "Insulaire")
     {
-        reduction = 0.75;
+        reduction = 0.25;
     }
     else if (categorie == "Insulaire secondaire")
     {
@@ -43,12 +43,12 @@ Passager::Passager(int i, string n, string p, string c, Billet *b)
     }
     else if (categorie == "Normal")
     {
-        reduction = 0;
+        reduction = 1;
     }
     else
     {
         categorie = "Normal";
-        reduction = 0;
+        reduction = 1;
     }
 }
 Passager::~Passager() {}
@@ -91,4 +91,9 @@ void Passager::setCategorie(string c)
 void Passager::ajoutBillet(Billet *b)
 {
     billetPassager.push_back(b);
+}
+
+int Passager::getReduction()
+{
+    return reduction;
 }

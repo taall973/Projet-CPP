@@ -34,6 +34,7 @@ void Compagnie::AjoutPersonnel(Personnel *p)
 void Compagnie::AjoutNavire(Navire *n)
 {
     toutNavires.push_back(n);
+    n->setCompagnie(this);
 }
 void Compagnie::AjoutBillets(Billet *b)
 {

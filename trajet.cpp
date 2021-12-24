@@ -1,25 +1,22 @@
 #include "trajet.hpp"
-#include "billet.hpp"
-#include "escales.hpp"
-#include "passager.hpp"
-#include "compagnie.hpp"
-#include "navire.hpp"
 
 using namespace std;
 
-Trajet::Trajet(string pd, string pa, int pi, Navire *nav)
+Trajet::Trajet(string pd, string pa, int pi, Navire *nav, Date depart, Date arrivee)
 {
     portDepart = pd;
     portArrive = pa;
-    prixInitial = pi;
+    prix = pi;
     navire = nav;
+    dateD = depart;
+    dateA = arrivee;
     compagnie = nav->getCompagnie();
     compagnie->AjoutTrajet(this);
 }
-Trajet::~Trajet(){}
+Trajet::~Trajet() {}
 void Trajet::ajoutEscales(Escales *e)
 {
-    prixInitial += e->getPrix();
+    prix += e->getPrix();
     escales.push_back(e);
 }
 void Trajet::ajoutPassager(Passager *p)
@@ -34,7 +31,8 @@ string Trajet::getPortArrive()
 {
     return portArrive;
 }
-Compagnie *Trajet::getCompagnie(){
+Compagnie *Trajet::getCompagnie()
+{
     return compagnie;
 }
 void Trajet::setPortDepart(string pd)
@@ -46,24 +44,24 @@ void Trajet::setPortArrive(string pa)
     portArrive = pa;
 }
 
-string Trajet::getDate()
+Date Trajet::getDateD()
 {
-    return date;
+    return dateD;
 }
 
-void Trajet::setDate(string d)
+Date Trajet::getDateA()
 {
-    date = d;
+    return dateA;
 }
 
-string Trajet::getHeure()
+void Trajet::setDateD(Date d)
 {
-    return heure;
+    dateD = d;
 }
 
-void Trajet::setHeure(string h)
+void Trajet::setDateA(Date d)
 {
-    heure = h;
+    dateA = d;
 }
 
 void Trajet::afficheEscales()
@@ -84,7 +82,8 @@ void Trajet::affichePassagers()
 }
 void Trajet::Affiche()
 {
-    cout << "Depart:" << this->getPortDepart() << ", "<< "Arrivé:" << this->getPortArrive() << endl;
+    cout << "Depart: " << this->getPortDepart() << ", "
+         << "Arrivee: " << this->getPortArrive() << ", Heure du départ: " << dateD << ", Heure d'arrivee: " << dateA << ", Prix:" << prix << endl;
     this->afficheEscales();
     cout << "Passagers:" << endl;
     this->affichePassagers();
@@ -92,7 +91,7 @@ void Trajet::Affiche()
 
 int Trajet::getPrixInitial()
 {
-    return prixInitial;
+    return prix;
 }
 
 vector<Billet *> Trajet::getBillets()

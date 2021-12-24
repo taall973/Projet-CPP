@@ -4,6 +4,13 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "date.hpp"
+#include "trajet.hpp"
+#include "billet.hpp"
+#include "escales.hpp"
+#include "passager.hpp"
+#include "compagnie.hpp"
+#include "navire.hpp"
 
 using namespace std;
 
@@ -15,6 +22,7 @@ class Capitaine;
 class Navire;
 class Second;
 class Matelot;
+class Date;
 class Trajet
 {
     vector<Escales *> escales;
@@ -23,12 +31,11 @@ class Trajet
     vector<Billet *> billets;
     Compagnie *compagnie;
     Navire *navire;
-    string date;  //Format JJ/MM/AA
-    string heure; //Format HH/MM
-    int prixInitial;
+    Date dateD, dateA; //Format JJ/MM/AA
+    int prix;
 
 public:
-    Trajet(string, string, int, Navire *);
+    Trajet(string, string, int, Navire *, Date, Date);
     ~Trajet();
     void ajoutEscales(Escales *);
     void ajoutPassager(Passager *);
@@ -37,10 +44,10 @@ public:
     Compagnie *getCompagnie();
     void setPortDepart(string);
     void setPortArrive(string);
-    string getDate();
-    void setDate(string);
-    string getHeure();
-    void setHeure(string);
+    Date getDateD();
+    Date getDateA();
+    void setDateD(Date);
+    void setDateA(Date);
     void afficheEscales();
     void affichePassagers();
     void Affiche();

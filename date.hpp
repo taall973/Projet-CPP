@@ -10,10 +10,13 @@ using namespace std;
 class Date
 {
 private:
-    int hh, mm, ss;
+    int jour, mois, an, hh, mm, ss;
 
 public:
-    Date(int h = 0, int m = 0, int s = 0);
+    Date(int j, int mo, int a, int h = 0, int m = 0, int s = 0);
+    int getJour();
+    int getMois();
+    int getAn();
     int getHH();
     int getMM();
     int getSS();

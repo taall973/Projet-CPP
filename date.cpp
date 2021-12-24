@@ -2,9 +2,25 @@
 
 using namespace std;
 
-Date::Date(int h, int m, int s) : hh(h % 24), mm(m % 60), ss(s % 60)
+Date::Date(int j, int mo, int a, int h, int m, int s) : jour(j % 31), mois(m % 12), an(a), hh(h % 24), mm(m % 60), ss(s % 60)
 {
 }
+
+int Date::getJour()
+{
+    return jour;
+}
+
+int Date::getMois()
+{
+    return mois;
+}
+
+int Date::getAn()
+{
+    return an;
+}
+
 int Date::getHH()
 {
     return hh;
@@ -22,7 +38,7 @@ int Date::getSS()
 
 void Date::afficher(ostream &flux) const
 {
-    flux << hh << ":" << mm << ":" << ss;
+    flux << jour << "/" << mois << "/" << an << " " << hh << ":" << mm << ":" << ss;
 }
 
 bool operator==(Date const &d1, Date const &d2)

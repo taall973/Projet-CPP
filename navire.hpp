@@ -8,6 +8,7 @@
 
 using namespace std;
 
+class Trajet;
 class Personnel;
 class Capitaine;
 class Second;
@@ -18,13 +19,14 @@ class Navire
     int id;
     string nom;
     int tonnage, capaciteMarchandise, maxSeconds, maxMatelots;
+    vector<Trajet *>trajets;
     Capitaine *capitaine;
     vector<Second *> seconds;
     vector<Matelot *> matelots;
     Compagnie *compagnie;
 
 public:
-    Navire();
+    Navire(int, string);
     Navire(int, string, Compagnie*);
     ~Navire();
     int getId();
@@ -48,6 +50,7 @@ public:
     void ajouterSecond(Second *);
     void ajouterMatelot(Matelot *);
     void ajoutPersonnel(Capitaine *, vector<Second *>, vector<Matelot *>);
+    void ajoutTrajet();
 };
 
 class NavireFret : public Navire

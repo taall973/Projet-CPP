@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <algorithm>
 
 #include "passager.hpp"
 #include "trajet.hpp"
@@ -30,7 +31,7 @@ public:
     int getPrixInitial();
     void setPrixInitial(int);
     void Affiche();
-    Passager getPassager();
+    Passager *getPassager();
     vector<Trajet *> getTrajets();
     void ajoutTrajet(Trajet *);
 };

@@ -21,9 +21,13 @@ void Trajet::ajoutEscales(Escales *e)
     prix += e->getPrix();
     escales.push_back(e);
 }
-void Trajet::ajoutPassager(Passager *p)
+void Trajet::ajoutPassager(Passager *p, Billet *b)
 {
-    passagers.push_back(p);
+    if (passagers.size() < navire->getCapacitePassagers())
+    {
+        passagers.push_back(p);
+        billets.push_back(b);
+    }
 }
 string Trajet::getPortDepart()
 {
@@ -99,11 +103,6 @@ int Trajet::getPrixInitial()
 vector<Billet *> Trajet::getBillets()
 {
     return billets;
-}
-
-void Trajet::ajouterBillet(Billet *b)
-{
-    billets.push_back(b);
 }
 
 Capitaine *Trajet::getCapitaine()

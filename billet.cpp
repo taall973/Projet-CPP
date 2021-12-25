@@ -9,9 +9,8 @@ Billet::Billet(int i, Passager *p, Trajet *trajet)
     trajets.push_back(trajet);
     compagnie = trajet->getCompagnie();
     compagnie->AjoutBillets(this);
-    trajet->ajoutPassager(passager);
+    trajet->ajoutPassager(passager, this);
     prix = trajet->getPrixInitial() * p->getReduction();
-    trajet->ajouterBillet(this);
 }
 
 Billet::~Billet() {}
@@ -35,16 +34,23 @@ void Billet::Affiche()
 {
     cout << "Voyageur:" << passager->getNom() << passager->getPrenom(); //<< t->Affiche() << endl
 }
-Passager Billet::getPassager()
+Passager *Billet::getPassager()
 {
-    return *passager;
+    return passager;
 }
+
+bool triTrajets(Trajet *t1, Trajet *t2)
+{
+    return t1 < t2;
+}
+
 vector<Trajet *> Billet::getTrajets()
 {
+    sort(trajets.begin(), trajets.end(), triTrajets);
     return trajets;
 }
 
 void Billet::ajoutTrajet(Trajet *trajet)
 {
-    trajets.push_back(trajet);
+    trajet->ajoutPassager(passager, this);
 }

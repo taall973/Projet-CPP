@@ -41,7 +41,7 @@ public:
     Trajet(string, string, int, Navire *, Date *, Date *);
     ~Trajet();
     void ajoutEscales(Escales *);
-    void ajoutPassager(Passager *);
+    void ajoutPassager(Passager *, Billet *);
     string getPortDepart();
     string getPortArrive();
     Compagnie *getCompagnie();
@@ -56,7 +56,6 @@ public:
     void Affiche();
     int getPrixInitial();
     vector<Billet *> getBillets();
-    void ajouterBillet(Billet *);
     Capitaine *getCapitaine();
     vector<Second *> getSeconds();
     vector<Matelot *> getMatelots();

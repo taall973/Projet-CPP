@@ -26,6 +26,12 @@ int Navire::getCapaciteMarchandise()
 {
     return capaciteMarchandise;
 }
+
+int Navire::getCapacitePassagers()
+{
+    return capacitePassagers;
+}
+
 int Navire::getMaxSeconds()
 {
     return maxSeconds;

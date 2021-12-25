@@ -33,6 +33,7 @@ public:
     string getNom();
     int getTonnage();
     int getCapaciteMarchandise();
+    int getCapacitePassagers();
     Compagnie *getCompagnie();
     int getMaxSeconds();
     int getMaxMatelots();

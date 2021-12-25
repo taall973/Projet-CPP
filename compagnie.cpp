@@ -13,7 +13,7 @@ Compagnie::Compagnie(int i, string n)
     id = i;
     nom = n;
 }
-Compagnie::~Compagnie(){}
+Compagnie::~Compagnie() {}
 int Compagnie::getId()
 {
     return id;
@@ -83,5 +83,18 @@ void Compagnie::AfficheEscales()
     for (ite = toutEscales.begin(); ite != toutEscales.end(); ite++)
     {
         cout << (*ite)->getNom() << endl;
+    }
+}
+
+void Compagnie::trajetsBillets(int id)
+{
+    itb = find(toutBillets.begin(), toutBillets.end(), id);
+    if (itb != toutBillets.end())
+    {
+        vector<Trajet *> trajets = (*itb)->getTrajets();
+        for (itt = trajets.begin(); itt != trajets.end(); itt++)
+        {
+            (*itt)->Affiche();
+        }
     }
 }

@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 #include <list>
+#include <algorithm>
 
 #include "personnel.hpp"
 #include "navire.hpp"
@@ -47,6 +48,7 @@ public:
     void AfficheBillets();
     void AfficheTrajets();
     void AfficheEscales();
+    void trajetsBillets(int id);
 };
 
 #endif

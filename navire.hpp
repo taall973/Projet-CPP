@@ -27,8 +27,8 @@ protected:
     Compagnie *compagnie;
 
 public:
-    Navire(int id, string nom, int tonnage, int capaciteMarchandise, int capacitePassagers = 0);
-    Navire(int id, string nom, int tonnage, int capaciteMarchandise, Compagnie *compagnie, int capacitePassagers = 0);
+    Navire(int id, string nom, int tonnage, int maxSeconds, int maxMatelots, int capaciteMarchandise, int capacitePassagers = 0);
+    Navire(int id, string nom, int tonnage, int maxSeconds, int maxMatelots, int capaciteMarchandise, Compagnie *compagnie, int capacitePassagers = 0);
     int getId();
     string getNom();
     int getTonnage();
@@ -49,15 +49,15 @@ public:
 class NavireFret : public Navire
 {
 public:
-    NavireFret(int id, string nom, int tonnage, int capaciteMarchandise);
-    NavireFret(int id, string nom, int tonnage, int capaciteMArchandise, Compagnie *compagnie);
+    NavireFret(int id, string nom, int tonnage, int maxSeconds, int maxMatelots, int capaciteMarchandise);
+    NavireFret(int id, string nom, int tonnage, int maxSeconds, int maxMatelots, int capaciteMArchandise, Compagnie *compagnie);
 };
 
 class NavirePassager : public Navire
 {
 public:
-    NavirePassager(int id, string nom, int tonnage, int capaciteMarchandise, int capacitePassagers);
-    NavirePassager(int id, string nom, int tonnage, int capaciteMarchandise, Compagnie *compagnie, int capacitePassagers);
+    NavirePassager(int id, string nom, int tonnage, int maxSeconds, int maxMatelots, int capaciteMarchandise, int capacitePassagers);
+    NavirePassager(int id, string nom, int tonnage, int maxSeconds, int maxMatelots, int capaciteMarchandise, Compagnie *compagnie, int capacitePassagers);
 };
 
 #endif

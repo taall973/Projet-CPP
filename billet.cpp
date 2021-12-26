@@ -39,14 +39,23 @@ Passager *Billet::getPassager()
     return passager;
 }
 
-bool triTrajets(Trajet *t1, Trajet *t2)
+/*bool Billet::triTrajets(Trajet *t1, Trajet *t2)
 {
     return t1 < t2;
 }
 
+class TriTrajets
+{
+public:
+    bool operator()(const Trajet *t1,const Trajet *t2)
+    {
+        return t1 < t2;
+    }
+};*/
+
 vector<Trajet *> Billet::getTrajets()
 {
-    sort(trajets.begin(), trajets.end(), triTrajets);
+    sort(trajets.begin(), trajets.end(), TriTrajets());
     return trajets;
 }
 

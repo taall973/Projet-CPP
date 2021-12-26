@@ -52,7 +52,7 @@ Second::Second(int i, string n, string p, Compagnie *c, int t) : Personnel(i, n,
 {
 }
 
-Matelot::Matelot(int i, string n, string p, Compagnie *c, int t) : Personnel(i, n, p, c)
+Matelot::Matelot(int i, string n, string p, Compagnie *c) : Personnel(i, n, p, c)
 {
 }
 
@@ -66,10 +66,10 @@ int Second::getTonnage()
     return tonnageMax;
 }
 
-bool triTrajets(Trajet *t1, Trajet *t2)
+/*bool Personnel::triTrajets(Trajet *t1, Trajet *t2)
 {
     return t1 < t2;
-}
+}*/
 
 vector<Trajet *> Personnel::getTrajets(int mois)
 {
@@ -84,6 +84,6 @@ vector<Trajet *> Personnel::getTrajets(int mois)
         }
     }
 
-    sort(trajetsMois.begin(), trajetsMois.end(), triTrajets);
+    sort(trajetsMois.begin(), trajetsMois.end(), TriTrajets());
     return trajetsMois;
 }

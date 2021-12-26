@@ -16,12 +16,12 @@ class Escales{
     string nom;
     static vector <Escales*>toutEscales;
     public:
-        Escales(int, string, int);
+        Escales(int id, string nom, int prix);
         ~Escales();
         int getId();
         string getNom();
-        void setId(int);
-        void setNom(string);
+        void setNom(string nom);
+        void setPrix(int prix);
         void Affiche();
         int getPrix();
 };

@@ -23,6 +23,7 @@ class Navire;
 class Second;
 class Matelot;
 class Date;
+
 class Trajet
 {
 
@@ -63,6 +64,15 @@ public:
     void ajouterSecond(Second *second);
     void ajouterMatelot(Matelot *matelot);
     void ajoutPersonnel(Capitaine *capitaine, vector<Second *> seconds, vector<Matelot *> matelots);
+};
+
+class TriTrajets
+{
+public:
+    bool operator()(const Trajet *t1,const Trajet *t2)
+    {
+        return t1 < t2;
+    }
 };
 
 #endif

@@ -2,56 +2,41 @@
 
 using namespace std;
 
-Passager::Passager(int i, string n, string p, string c)
+Passager::Passager(int i, string n, string p) : id(i), nom(n), prenom(p), reduction(1), categorie("normal")
 {
-    id = i;
-    nom = n;
-    prenom = p;
-    categorie = c;
-    if (categorie == "Insulaire")
-    {
-        reduction = 0.25;
-    }
-    else if (categorie == "Insulaire secondaire")
-    {
-        reduction = 0.50;
-    }
-    else if (categorie == "Normal")
-    {
-        reduction = 1;
-    }
-    else
-    {
-        categorie = "Normal";
-        reduction = 1;
-    }
 }
-Passager::Passager(int i, string n, string p, string c, Billet *b)
+
+Passager::Passager(int i, string n, string p, Billet *b) : id(i), nom(n), prenom(p), reduction(1), categorie("normal")
 {
-    id = i;
-    nom = n;
-    prenom = p;
-    categorie = c;
     billetPassager.push_back(b);
-    if (categorie == "Insulaire")
-    {
-        reduction = 0.25;
-    }
-    else if (categorie == "Insulaire secondaire")
-    {
-        reduction = 0.50;
-    }
-    else if (categorie == "Normal")
-    {
-        reduction = 1;
-    }
-    else
-    {
-        categorie = "Normal";
-        reduction = 1;
-    }
 }
-Passager::~Passager() {}
+
+Insulaire::Insulaire(int i, string n, string p) : Passager(i, n, p)
+{
+    categorie = "insulaire";
+    reduction = 0.5;
+}
+
+Insulaire::Insulaire(int i, string n, string p, Billet *b) : Passager(i, n, p, b)
+{
+    categorie = "insulaire";
+    reduction = 0.5;
+    billetPassager.push_back(b);
+}
+
+InsulaireSecondaire::InsulaireSecondaire(int i, string n, string p) : Passager(i, n, p)
+{
+    categorie = "insulaire secondaire";
+    reduction = 0.25;
+}
+
+InsulaireSecondaire::InsulaireSecondaire(int i, string n, string p, Billet *b) : Passager(i, n, p, b)
+{
+    categorie = "insulaire secondaire";
+    reduction = 0.25;
+    billetPassager.push_back(b);
+}
+
 int Passager::getId()
 {
     return id;
@@ -64,10 +49,7 @@ string Passager::getPrenom() const
 {
     return prenom;
 }
-string Passager::getCategorie() const
-{
-    return categorie;
-}
+
 void Passager::getBillets()
 {
     vector<Billet *>::iterator it;
@@ -84,16 +66,18 @@ void Passager::setPrenom(string p)
 {
     prenom = p;
 }
-void Passager::setCategorie(string c)
-{
-    categorie = c;
-}
+
 void Passager::ajoutBillet(Billet *b)
 {
     billetPassager.push_back(b);
 }
 
-int Passager::getReduction()
+double Passager::getReduction()
 {
     return reduction;
+}
+
+string Passager::getCategorie() const
+{
+    return categorie;
 }

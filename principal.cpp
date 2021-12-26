@@ -15,7 +15,7 @@ using namespace std;
 
 int main()
 {
-    Compagnie compagnie(101, "Spirit Waterways");
+    /*Compagnie compagnie(101, "Spirit Waterways");
 
     //Création de Personnel
     string Noms[8] = {"Jack", "Joel", "Poole", "Ryan", "Ethan", "Laine", "Harry", "Seth"};
@@ -71,7 +71,13 @@ int main()
 
     //d1 = d2;
 
-    cout << d1 << endl;
+    cout << d1 << endl;*/
+
+    Insulaire test(1,"X","man");
+    Passager e(2,"ee","d");
+
+    cout << e.getReduction() << endl;
+    cout << test.getReduction() << endl;
 
     return 0;
 }

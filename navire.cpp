@@ -2,10 +2,10 @@
 
 using namespace std;
 
-Navire::Navire(int i, string n, int t, int cm, int cp = 0) : id(i), nom(n), tonnage(t), capaciteMarchandise(cm), capacitePassagers(cp)
+Navire::Navire(int i, string n, int t, int ms, int mm, int cm, int cp) : id(i), nom(n), tonnage(t), maxSeconds(ms), maxMatelots(mm), capaciteMarchandise(cm), capacitePassagers(cp)
 {
 }
-Navire::Navire(int i, string n, int t, int cm, Compagnie *c, int cp = 0) : id(i), nom(n), compagnie(c), tonnage(t), capaciteMarchandise(cm), capacitePassagers(cp)
+Navire::Navire(int i, string n, int t, int ms, int mm, int cm, Compagnie *c, int cp) : id(i), nom(n), compagnie(c), tonnage(t), maxSeconds(ms), maxMatelots(mm), capaciteMarchandise(cm), capacitePassagers(cp)
 {
     compagnie->AjoutNavire(this);
 }
@@ -74,18 +74,18 @@ void Navire::setCompagnie(Compagnie *c)
     compagnie = c;
 }
 
-NavireFret::NavireFret(int i, string n, int t, int cm) : Navire(i, n, t, cm)
+NavireFret::NavireFret(int i, string n, int t, int ms, int mm, int cm) : Navire(i, n, t, ms, mm, cm)
 {
 }
 
-NavireFret::NavireFret(int i, string n, int t, int cm, Compagnie *c) : Navire(i, n, t, cm, c)
+NavireFret::NavireFret(int i, string n, int t, int ms, int mm, int cm, Compagnie *c) : Navire(i, n, t, ms, mm, cm, c)
 {
 }
 
-NavirePassager::NavirePassager(int i, string n, int t, int cm, int cp) : Navire(i, n, t, cm, cp)
+NavirePassager::NavirePassager(int i, string n, int t, int ms, int mm, int cm, int cp) : Navire(i, n, t, ms, mm, cm, cp)
 {
 }
 
-NavirePassager::NavirePassager(int i, string n, int t, int cm, Compagnie *c, int cp) : Navire(i, n, t, cm, c, cp)
+NavirePassager::NavirePassager(int i, string n, int t, int ms, int mm, int cm, Compagnie *c, int cp) : Navire(i, n, t, ms, mm, cm, c, cp)
 {
 }

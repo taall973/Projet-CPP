@@ -13,26 +13,39 @@ using namespace std;
 class Billet;
 class Passager
 {
+protected:
     int id;
     string nom, prenom, categorie;
-    float reduction; //Vaut mieux mettre Reduction dans cette classe pour mieux l'appliquer sur le Billet
+    double reduction;
     vector<Billet *> billetPassager;
 
 public:
     //2 constructeurs
-    Passager(int, string, string, string);
-    Passager(int, string, string, string, Billet *);
-    ~Passager();
+    Passager(int id, string nom, string prenom);
+    Passager(int id, string nom, string prenom, Billet *billet);
     int getId();
     string getNom() const;
     string getPrenom() const;
     string getCategorie() const;
-    int getReduction();
+    double getReduction();
     void getBillets();
-    void setNom(string);
-    void setPrenom(string);
-    void setCategorie(string);
-    void ajoutBillet(Billet *);
+    void setNom(string nom);
+    void setPrenom(string prenom);
+    void ajoutBillet(Billet *billet);
+};
+
+class Insulaire : public Passager
+{
+public:
+    Insulaire(int id, string nom, string prenom);
+    Insulaire(int id, string nom, string prenom, Billet *billet);
+};
+
+class InsulaireSecondaire : public Passager
+{
+public:
+    InsulaireSecondaire(int id, string nom, string prenom);
+    InsulaireSecondaire(int id, string nom, string prenom, Billet *billet);
 };
 
 #endif

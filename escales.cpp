@@ -21,9 +21,9 @@ string Escales::getNom()
 {
     return nom;
 }
-void Escales::setId(int i)
+void Escales::setPrix(int p)
 {
-    id = i;
+    id = p;
 }
 void Escales::setNom(string n)
 {

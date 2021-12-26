@@ -30,6 +30,7 @@ public:
     void setPrenom(string);
     void setCompagnie(Compagnie *);
     vector<Trajet *> getTrajets(int mois);
+    bool triTrajets(Trajet *t1, Trajet *t2);
 };
 
 class Capitaine : public Personnel
@@ -54,7 +55,7 @@ class Matelot : public Personnel
 {
 
 public:
-    Matelot(int id, string nom, string prenom, Compagnie *compagnie, int tonnageMax);
+    Matelot(int id, string nom, string prenom, Compagnie *compagnie);
 };
 
 #endif

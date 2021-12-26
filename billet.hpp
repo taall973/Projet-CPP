@@ -34,6 +34,7 @@ public:
     Passager *getPassager();
     vector<Trajet *> getTrajets();
     void ajoutTrajet(Trajet *);
+    bool triTrajets(Trajet *t1, Trajet *t2);
 };
 
 #endif

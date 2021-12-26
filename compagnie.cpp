@@ -88,7 +88,8 @@ void Compagnie::AfficheEscales()
 
 void Compagnie::trajetsBillets(int id)
 {
-    itb = find(toutBillets.begin(), toutBillets.end(), id);
+    itb = find_if(toutBillets.begin(), toutBillets.end(), [&id](Billet *billet)
+               { return billet->getId() == id; });
     if (itb != toutBillets.end())
     {
         vector<Trajet *> trajets = (*itb)->getTrajets();

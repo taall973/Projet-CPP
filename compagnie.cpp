@@ -98,3 +98,16 @@ void Compagnie::trajetsBillets(int id)
         }
     }
 }
+
+void Compagnie::trajetsPersonnel(Personnel *p, int mois)
+{
+    itp = find(toutPersonnels.begin(), toutPersonnels.end(), p);
+    if (itp != toutPersonnels.end())
+    {
+        vector<Trajet *> trajets = (*itp)->getTrajets(mois);
+        for (itt = trajets.begin(); itt != trajets.end(); itt++)
+        {
+            (*itt)->Affiche();
+        }
+    }
+}

@@ -66,3 +66,16 @@ int Second::getTonnage()
 {
     return tonnageMax;
 }
+
+bool triTrajets(Trajet *t1, Trajet *t2)
+{
+    return t1 < t2;
+}
+
+vector<Trajet *> Personnel::getTrajets(int mois)
+{
+    vector<Trajet *>::iterator trajetsMois = find(trajets.begin(), trajets.end(), [&mois](Trajet *t)
+                                                  { return t->getDateD()->getMois() == mois; });
+    sort(trajets.begin(), trajets.end(), triTrajets);
+    return trajets;
+}

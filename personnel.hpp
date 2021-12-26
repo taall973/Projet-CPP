@@ -10,11 +10,13 @@
 using namespace std;
 
 class Compagnie;
+class Trajet;
 class Personnel
 {
     int id;
     string nom, prenom;
     Compagnie *compagnie;
+    vector<Trajet *> trajets;
 
 public:
     Personnel();
@@ -28,12 +30,14 @@ public:
     void setId(int);
     void setNom(string);
     void setPrenom(string);
-    void setCompagnie(Compagnie*);
+    void setCompagnie(Compagnie *);
+    vector<Trajet *> getTrajets(int mois);
 };
 
 class Capitaine : public Personnel
 {
     int tonnageMax;
+
 public:
     Capitaine(int);
     int getTonnage();
@@ -42,6 +46,7 @@ public:
 class Second : public Personnel
 {
     int tonnageMax;
+
 public:
     Second(int);
     int getTonnage();

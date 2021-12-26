@@ -34,7 +34,7 @@ m2=1..*
 concerne</panel_attributes><additional_attributes>10;20;140;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1100</x><y>320</y><w>100</w><h>100</h></coordinates><panel_attributes>lt=-
 m1=*
 m2=1
-teaches to &gt;</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>99</x><y>460</y><w>390</w><h>50</h></coordinates><panel_attributes>lt=-
+teaches to &gt;</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>99</x><y>470</y><w>390</w><h>50</h></coordinates><panel_attributes>lt=-
 m1=1
 m2=*
 possede</panel_attributes><additional_attributes>10;20;370;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1590</x><y>290</y><w>160</w><h>170</h></coordinates><panel_attributes>Personnel
@@ -54,7 +54,7 @@ static vector&lt;Personnel *&gt; </panel_attributes><additional_attributes></add
 - role : string = "matelot"</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>940</x><y>660</y><w>140</w><h>130</h></coordinates><panel_attributes>NavirePassager
 --
 
-- capacitePassager : int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1170</x><y>670</y><w>140</w><h>130</h></coordinates><panel_attributes>NavireFret
+- capacitePassager : int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1170</x><y>660</y><w>140</w><h>130</h></coordinates><panel_attributes>NavireFret
 --</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>650</x><y>50</y><w>180</w><h>160</h></coordinates><panel_attributes>Escale
 --
 - id : int
@@ -72,7 +72,7 @@ m2=*
 archive</panel_attributes><additional_attributes>510;210;420;210;420;10;10;10;10;400</additional_attributes></element><element><id>Relation</id><coordinates><x>1190</x><y>210</y><w>510</w><h>100</h></coordinates><panel_attributes>lt=-
 m1=*
 m2=*
-teaches to &gt;</panel_attributes><additional_attributes>10;20;490;20;490;80</additional_attributes></element><element><id>Relation</id><coordinates><x>1001</x><y>556</y><w>160</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>140;10;140;70;10;70;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>1131</x><y>556</y><w>130</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;70;110;70;110;110</additional_attributes></element><element><id>Relation</id><coordinates><x>1661</x><y>452</y><w>120</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>19;10;20;50;100;50;99;110</additional_attributes></element><element><id>Relation</id><coordinates><x>1521</x><y>452</y><w>180</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>159;10;160;50;20;50;19;110</additional_attributes></element><element><id>Relation</id><coordinates><x>1661</x><y>452</y><w>310</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>19;10;20;50;290;50;289;110</additional_attributes></element><element><id>Relation</id><coordinates><x>820</x><y>590</y><w>750</w><h>280</h></coordinates><panel_attributes>lt=-
+teaches to &gt;</panel_attributes><additional_attributes>10;20;490;20;490;80</additional_attributes></element><element><id>Relation</id><coordinates><x>1001</x><y>556</y><w>160</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>140;10;140;70;10;70;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>1131</x><y>556</y><w>130</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;70;110;70;110;100</additional_attributes></element><element><id>Relation</id><coordinates><x>1661</x><y>452</y><w>120</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>19;10;20;50;100;50;99;110</additional_attributes></element><element><id>Relation</id><coordinates><x>1521</x><y>452</y><w>180</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>159;10;160;50;20;50;19;110</additional_attributes></element><element><id>Relation</id><coordinates><x>1661</x><y>452</y><w>310</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>19;10;20;50;290;50;289;110</additional_attributes></element><element><id>Relation</id><coordinates><x>820</x><y>590</y><w>750</w><h>280</h></coordinates><panel_attributes>lt=-
 m1=1
 m2=*
 pilote</panel_attributes><additional_attributes>720;110;720;260;10;260;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>760</x><y>590</y><w>1020</w><h>310</h></coordinates><panel_attributes>lt=-

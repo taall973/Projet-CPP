@@ -49,6 +49,7 @@ public:
     void AfficheTrajets();
     void AfficheEscales();
     void trajetsBillets(int id);
+    void trajetsPersonnel(Personnel *p, int mois);
 };
 
 #endif

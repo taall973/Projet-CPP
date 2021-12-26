@@ -34,22 +34,22 @@ class Compagnie
     vector<Escales *> toutEscales;
 
 public:
-    Compagnie(int, string);
+    Compagnie(int id, string nom);
     ~Compagnie();
     int getId();
     string getNom();
-    void AjoutPersonnel(Personnel *);
-    void AjoutNavire(Navire *);
-    void AjoutBillets(Billet *);
-    void AjoutTrajet(Trajet *);
-    void AjoutEscales(Escales *);
+    void AjoutPersonnel(Personnel *personnel);
+    void AjoutNavire(Navire *navire);
+    void AjoutBillets(Billet *billet);
+    void AjoutTrajet(Trajet *trajet);
+    void AjoutEscales(Escales *escale);
     void AffichePersonnels();
     void AfficheNavires();
     void AfficheBillets();
     void AfficheTrajets();
     void AfficheEscales();
-    void trajetsBillets(int id);
-    void trajetsPersonnel(Personnel *p, int mois);
+    void trajetsBillets(int idBillet);
+    void trajetsPersonnel(Personnel *personnel, int mois);
 };
 
 #endif

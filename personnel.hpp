@@ -19,9 +19,7 @@ class Personnel
     vector<Trajet *> trajets;
 
 public:
-    Personnel();
-    Personnel(Compagnie *);
-    Personnel(int, string, string);
+    Personnel(int id, string nom, string prenom, Compagnie *compagnie);
     ~Personnel();
     int getId();
     string getNom();
@@ -39,7 +37,7 @@ class Capitaine : public Personnel
     int tonnageMax;
 
 public:
-    Capitaine(int);
+    Capitaine(int id, string nom, string prenom, Compagnie *compagnie, int tonnageMax);
     int getTonnage();
 };
 
@@ -48,7 +46,7 @@ class Second : public Personnel
     int tonnageMax;
 
 public:
-    Second(int);
+    Second(int id, string nom, string prenom, Compagnie *compagnie, int tonnageMax);
     int getTonnage();
 };
 
@@ -56,7 +54,7 @@ class Matelot : public Personnel
 {
 
 public:
-    Matelot();
+    Matelot(int id, string nom, string prenom, Compagnie *compagnie, int tonnageMax);
 };
 
 #endif

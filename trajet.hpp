@@ -25,8 +25,9 @@ class Matelot;
 class Date;
 class Trajet
 {
+
     vector<Escales *> escales;
-    string portDepart, portArrive;
+    Escales *portDepart, *portArrive;
     vector<Passager *> passagers;
     vector<Billet *> billets;
     Compagnie *compagnie;
@@ -38,19 +39,18 @@ class Trajet
     vector<Matelot *> matelots;
 
 public:
-    Trajet(string, string, int, Navire *, Date *, Date *);
-    ~Trajet();
-    void ajoutEscales(Escales *);
-    void ajoutPassager(Passager *, Billet *);
-    string getPortDepart();
-    string getPortArrive();
+    Trajet(Escales *portDepart, Escales *portArrivee, Navire *navire, Date *dateDepart, Date *dateArrivee);
+    void ajoutEscales(Escales *escales);
+    void ajoutPassager(Passager *passager, Billet *billet);
+    Escales *getPortDepart();
+    Escales *getPortArrive();
     Compagnie *getCompagnie();
-    void setPortDepart(string);
-    void setPortArrive(string);
+    void setPortDepart(Escales *portDepart);
+    void setPortArrive(Escales *portArrivee);
     Date *getDateD();
     Date *getDateA();
-    void setDateD(Date *);
-    void setDateA(Date *);
+    void setDateD(Date *dateDepart);
+    void setDateA(Date *dateArrivee);
     void afficheEscales();
     void affichePassagers();
     void Affiche();
@@ -59,10 +59,10 @@ public:
     Capitaine *getCapitaine();
     vector<Second *> getSeconds();
     vector<Matelot *> getMatelots();
-    void setCapitaine(Capitaine *);
-    void ajouterSecond(Second *);
-    void ajouterMatelot(Matelot *);
-    void ajoutPersonnel(Capitaine *, vector<Second *>, vector<Matelot *>);
+    void setCapitaine(Capitaine *capitaine);
+    void ajouterSecond(Second *second);
+    void ajouterMatelot(Matelot *matelot);
+    void ajoutPersonnel(Capitaine *capitaine, vector<Second *> seconds, vector<Matelot *> matelots);
 };
 
 #endif

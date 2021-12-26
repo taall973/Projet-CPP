@@ -2,19 +2,10 @@
 
 using namespace std;
 
-Trajet::Trajet(string pd, string pa, int pi, Navire *nav, Date *depart, Date *arrivee)
+Trajet::Trajet(Escales *portDep, Escales *portArr, Navire *nav, Date *dateDepart, Date *dateArrivee) : portDepart(portDep), portArrive(portArr), navire(nav), dateD(dateDepart), dateA(dateArrivee), prix(portDepart->getPrix() + portArrive->getPrix()), compagnie(navire->getCompagnie())
 {
-    portDepart = pd;
-    portArrive = pa;
-    prix = pi;
-    navire = nav;
-    dateD = depart;
-    dateA = arrivee;
-    compagnie = nav->getCompagnie();
     compagnie->AjoutTrajet(this);
 }
-
-Trajet::~Trajet() {}
 
 void Trajet::ajoutEscales(Escales *e)
 {
@@ -29,11 +20,11 @@ void Trajet::ajoutPassager(Passager *p, Billet *b)
         billets.push_back(b);
     }
 }
-string Trajet::getPortDepart()
+Escales *Trajet::getPortDepart()
 {
     return portDepart;
 }
-string Trajet::getPortArrive()
+Escales *Trajet::getPortArrive()
 {
     return portArrive;
 }
@@ -41,13 +32,13 @@ Compagnie *Trajet::getCompagnie()
 {
     return compagnie;
 }
-void Trajet::setPortDepart(string pd)
+void Trajet::setPortDepart(Escales *portDep)
 {
-    portDepart = pd;
+    portDepart = portDep;
 }
-void Trajet::setPortArrive(string pa)
+void Trajet::setPortArrive(Escales *portArr)
 {
-    portArrive = pa;
+    portArrive = portArr;
 }
 
 Date *Trajet::getDateD()

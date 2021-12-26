@@ -36,6 +36,7 @@ int main()
     //Création de Navire
     //Navire *nav = new Navire[3];
     Navire nav1(14, "Titanic");
+    Navire nav1(14, "Titanic", 100, 10, 44);
     Navire nav2(24, "Liberty", &compagnie);
     Navire nav3(56, "Spirit", &compagnie);
     compagnie.AjoutNavire(&nav1);

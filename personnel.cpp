@@ -74,8 +74,17 @@ bool triTrajets(Trajet *t1, Trajet *t2)
 
 vector<Trajet *> Personnel::getTrajets(int mois)
 {
-    vector<Trajet *>::iterator trajetsMois = find(trajets.begin(), trajets.end(), [&mois](Trajet *t)
-                                                  { return t->getDateD()->getMois() == mois; });
-    sort(trajets.begin(), trajets.end(), triTrajets);
-    return trajets;
+
+    vector<Trajet *> trajetsMois;
+    vector<Trajet *>::iterator iTtrajetsMois;
+    for (iTtrajetsMois = trajets.begin(); iTtrajetsMois != trajets.end(); iTtrajetsMois++)
+    {
+        if ((*iTtrajetsMois)->getDateD()->getMois() == mois)
+        {
+            trajetsMois.push_back((*iTtrajetsMois));
+        }
+    }
+
+    sort(trajetsMois.begin(), trajetsMois.end(), triTrajets);
+    return trajetsMois;
 }

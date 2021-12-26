@@ -15,9 +15,33 @@ using namespace std;
 
 int main()
 {
-    /*Compagnie compagnie(101, "Spirit Waterways");
+    Compagnie compagnie(101, "Spirit Waterways");
 
-    //Création de Personnel
+    //Instanciation des navires
+    Navire titanic(1, "Titanic", 100, 2, 2, 10, &compagnie, 44);
+    Navire liberty(2, "Liberty", 120, 1, 1, 120, &compagnie);
+    Navire spirit(3, "Spirit", 500, 2, 2, 100, &compagnie, 200);
+
+    //Instanciation du personnel
+    Capitaine sparrow(1, "Sparrow", "Jack", &compagnie, 100);
+    Capitaine sharif(2, "Sharif", "Omar", &compagnie, 120);
+
+    Second gardner(1, "Gardner", "Eva", &compagnie, 120);
+    Second belmondo(2, "Sharif", "Omar", &compagnie, 100);
+
+    Matelot daly(1, "Daly", "Ruby", &compagnie);
+    Matelot aufray(2, "Aufray", "Hugues", &compagnie);
+
+    //Instanciation des escales
+    Escales nice(1, "Nice", 26);
+    Escales marseille(2, "Marseille", 23);
+    Escales leHavre(3, "Le Havre", 22);
+    Escales dunkerque(4, "Dunkerque", 18);
+    Escales rouen(5, "Rouen", 21);
+    Escales ajaccio(6, "Ajaccio", 30);
+
+    //Instanciation des trajets
+
     string Noms[8] = {"Jack", "Joel", "Poole", "Ryan", "Ethan", "Laine", "Harry", "Seth"};
     Personnel *p = new Personnel[6];
     for (int i = 0; i < 5; i++)
@@ -71,10 +95,11 @@ int main()
 
     //d1 = d2;
 
-    cout << d1 << endl;*/
+    cout << d1 << endl;
+    * /
 
-    Insulaire test(1,"X","man");
-    Passager e(2,"ee","d");
+        Insulaire test(1, "X", "man");
+    Passager e(2, "ee", "d");
 
     cout << e.getReduction() << endl;
     cout << test.getReduction() << endl;

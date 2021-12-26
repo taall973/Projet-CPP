@@ -40,69 +40,74 @@ int main()
     Escales rouen(5, "Rouen", 21);
     Escales ajaccio(6, "Ajaccio", 30);
 
-    //Instanciation des trajets
+    //Instanciation des trajets de Mars
+    Trajet mars_nice_marseille(&nice, &marseille, &titanic, new Date(11, 3, 21, 10, 21), new Date(12, 3, 21, 9, 21));
+    Trajet mars_marseille_leHavre(&marseille, &leHavre, &spirit, new Date(15, 3, 21, 17, 45), new Date(18, 3, 21, 10, 41));
+    Trajet mars_leHavre_dunkerque(&leHavre, &dunkerque, &liberty, new Date(19, 3, 21, 6, 50), new Date(19, 3, 21, 20, 10));
+    Trajet mars_dunkerque_rouen(&dunkerque, &rouen, &titanic, new Date(24, 3, 21, 10, 55), new Date(25, 3, 21, 7, 30));
+    Trajet mars_rouen_ajaccio(&rouen, &ajaccio, &liberty, new Date(24, 3, 21, 14, 59), new Date(26, 3, 21, 10, 21));
 
-    string Noms[8] = {"Jack", "Joel", "Poole", "Ryan", "Ethan", "Laine", "Harry", "Seth"};
-    Personnel *p = new Personnel[6];
-    for (int i = 0; i < 5; i++)
-    {
-        p[i].setCompagnie(&compagnie);
-        p[i].setId(i);
-        p[i].setNom(Noms[i]);
-    }
-    Capitaine *c1 = (Capitaine *)&p[0];
-    Second *s1 = (Second *)&p[1];
-    Matelot *m1 = (Matelot *)&p[2];
+    //Instanciation des trajets d'Avril
+    Trajet avril_marseille_nice(&marseille, &nice, &titanic, new Date(11, 4, 21, 10, 21), new Date(12, 4, 21, 9, 21));
+    Trajet avril_leHavre_marseille(&leHavre, &marseille, &spirit, new Date(15, 4, 21, 17, 45), new Date(18, 4, 21, 10, 41));
+    Trajet avril_dunkerque_leHavre(&dunkerque, &leHavre, &liberty, new Date(19, 4, 21, 6, 50), new Date(19, 4, 21, 20, 10));
+    Trajet avril_rouen_dunkerque(&rouen, &dunkerque, &titanic, new Date(24, 4, 21, 10, 55), new Date(25, 4, 21, 7, 30));
+    Trajet avril_ajaccio_rouen(&ajaccio, &rouen, &liberty, new Date(24, 4, 21, 14, 59), new Date(26, 4, 21, 10, 21));
 
-    //cout << p[1].getId() << " " << p[1].getCompagnie() << " " << p[1].getNom() << endl;
-    //cout << c1->getId() << " " << c1->getNom() << c1->getCompagnie() << endl;
+    //Instanciation des trajets de Mai
+    Trajet mai_nice_marseille(&nice, &marseille, &titanic, new Date(11, 5, 21, 10, 21), new Date(12, 5, 21, 9, 21));
+    Trajet mai_marseille_leHavre(&marseille, &leHavre, &spirit, new Date(15, 5, 21, 17, 45), new Date(18, 5, 21, 10, 41));
+    Trajet mai_leHavre_dunkerque(&leHavre, &dunkerque, &liberty, new Date(19, 5, 21, 6, 50), new Date(19, 5, 21, 20, 10));
+    Trajet mai_dunkerque_rouen(&dunkerque, &rouen, &titanic, new Date(24, 5, 21, 10, 55), new Date(25, 5, 21, 7, 30));
+    Trajet mai_rouen_ajaccio(&rouen, &ajaccio, &liberty, new Date(24, 5, 21, 14, 59), new Date(26, 5, 21, 10, 21));
 
-    //Création de Navire
-    //Navire *nav = new Navire[3];
-    Navire nav1(14, "Titanic");
-    Navire nav1(14, "Titanic", 100, 10, 44);
-    Navire nav2(24, "Liberty", &compagnie);
-    Navire nav3(56, "Spirit", &compagnie);
-    compagnie.AjoutNavire(&nav1);
+    //Instanciation des trajets de Juin
+    Trajet juin_marseille_nice(&marseille, &nice, &titanic, new Date(11, 6, 21, 10, 21), new Date(12, 6, 21, 9, 21));
+    Trajet juin_leHavre_marseille(&leHavre, &marseille, &spirit, new Date(15, 6, 21, 17, 45), new Date(18, 6, 21, 10, 41));
+    Trajet juin_dunkerque_leHavre(&dunkerque, &leHavre, &liberty, new Date(19, 6, 21, 6, 50), new Date(19, 6, 21, 20, 10));
+    Trajet juin_rouen_dunkerque(&rouen, &dunkerque, &titanic, new Date(24, 6, 21, 10, 55), new Date(25, 6, 21, 7, 30));
+    Trajet juin_ajaccio_rouen(&ajaccio, &rouen, &liberty, new Date(24, 6, 21, 14, 59), new Date(26, 6, 21, 10, 21));
 
-    nav1.setCapitaine(c1);
-    nav1.ajouterSecond(s1);
-    nav1.ajouterMatelot(m1);
+    //Instanciation des trajets de Juillet
+    Trajet juillet_nice_marseille(&nice, &marseille, &titanic, new Date(11, 7, 21, 10, 21), new Date(12, 7, 21, 9, 21));
+    Trajet juillet_marseille_leHavre(&marseille, &leHavre, &spirit, new Date(15, 7, 21, 17, 45), new Date(18, 7, 21, 10, 41));
+    Trajet juillet_leHavre_dunkerque(&leHavre, &dunkerque, &liberty, new Date(19, 7, 21, 6, 50), new Date(19, 7, 21, 20, 10));
+    Trajet juillet_dunkerque_rouen(&dunkerque, &rouen, &titanic, new Date(24, 7, 21, 10, 55), new Date(25, 7, 21, 7, 30));
+    Trajet juillet_rouen_ajaccio(&rouen, &ajaccio, &liberty, new Date(24, 7, 21, 14, 59), new Date(26, 7, 21, 10, 21));
 
-    //Création de Escales
-    Escales es1(7, "Nice", 20);
-    Escales es2(12, "Toulouse", 30);
-    Escales es3(33, "Brighton", 60);
+    //Instanciation des trajets d'Aout
+    Trajet aout_marseille_nice(&marseille, &nice, &titanic, new Date(11, 8, 21, 10, 21), new Date(12, 8, 21, 9, 21));
+    Trajet aout_leHavre_marseille(&leHavre, &marseille, &spirit, new Date(15, 8, 21, 17, 45), new Date(18, 8, 21, 10, 41));
+    Trajet aout_dunkerque_leHavre(&dunkerque, &leHavre, &liberty, new Date(19, 8, 21, 6, 50), new Date(19, 8, 21, 20, 10));
+    Trajet aout_rouen_dunkerque(&rouen, &dunkerque, &titanic, new Date(24, 8, 21, 10, 55), new Date(25, 8, 21, 7, 30));
+    Trajet aout_ajaccio_rouen(&ajaccio, &rouen, &liberty, new Date(24, 8, 21, 14, 59), new Date(26, 8, 21, 10, 21));
 
-    //Création de Trajets
+    //Instanciation des trajets de Septembre
+    Trajet septembre_nice_marseille(&nice, &marseille, &titanic, new Date(11, 9, 21, 10, 21), new Date(12, 9, 21, 9, 21));
+    Trajet septembre_marseille_leHavre(&marseille, &leHavre, &spirit, new Date(15, 9, 21, 17, 45), new Date(18, 9, 21, 10, 41));
+    Trajet septembre_leHavre_dunkerque(&leHavre, &dunkerque, &liberty, new Date(19, 9, 21, 6, 50), new Date(19, 9, 21, 20, 10));
+    Trajet septembre_dunkerque_rouen(&dunkerque, &rouen, &titanic, new Date(24, 9, 21, 10, 55), new Date(25, 9, 21, 7, 30));
+    Trajet septembre_rouen_ajaccio(&rouen, &ajaccio, &liberty, new Date(24, 9, 21, 14, 59), new Date(26, 9, 21, 10, 21));
 
-    Date d1(25, 45, 500, 22444, 54455, 25542);
-    Date d2(85, 4445, 55300, 252444, 5554455, 285542);
+    //Instanciation des trajets d'Octobre
+    Trajet octobre_marseille_nice(&marseille, &nice, &titanic, new Date(11, 10, 21, 10, 21), new Date(12, 10, 21, 9, 21));
+    Trajet octobre_leHavre_marseille(&leHavre, &marseille, &spirit, new Date(15, 10, 21, 17, 45), new Date(18, 10, 21, 10, 41));
+    Trajet octobre_dunkerque_leHavre(&dunkerque, &leHavre, &liberty, new Date(19, 10, 21, 6, 50), new Date(19, 10, 21, 20, 10));
+    Trajet octobre_rouen_dunkerque(&rouen, &dunkerque, &titanic, new Date(24, 10, 21, 10, 55), new Date(25, 10, 21, 7, 30));
+    Trajet octobre_ajaccio_rouen(&ajaccio, &rouen, &liberty, new Date(24, 10, 21, 14, 59), new Date(26, 10, 21, 10, 21));
 
-    Trajet tr1(es1.getNom(), es3.getNom(), 100, &nav1, &d1, &d2);
+    //Instanciation des passagers
+    Passager brassens(1, "Brassens", "Georges");
+    Passager aznavour(2, "Aznavour", "Charles");
+    Passager piaf(3, "Piaf", "Edith");
 
-    //Création de Passagers
-    Passager pass1(4, Noms[4], Noms[5], "Insulaire");
+    Insulaire obelix(1, "Obelix", "Asterix");
+    Insulaire milou(2, "Milou", "Tintin");
 
-    //Billets
-    Billet b1(10, &pass1, &tr1);
+    InsulaireSecondaire roumanoff(1, "Roumanoff", "Anne");
+    InsulaireSecondaire tagbo(2, "Tagbo", "Claudia");
 
-    //Compagnie
-    compagnie.AfficheNavires();
-    compagnie.AffichePersonnels();
-    compagnie.AfficheTrajets();
-    compagnie.AfficheBillets();
-
-    //d1 = d2;
-
-    cout << d1 << endl;
-    * /
-
-        Insulaire test(1, "X", "man");
-    Passager e(2, "ee", "d");
-
-    cout << e.getReduction() << endl;
-    cout << test.getReduction() << endl;
+    
 
     return 0;
 }

@@ -30,7 +30,6 @@ public:
     void setPrenom(string);
     void setCompagnie(Compagnie *);
     vector<Trajet *> getTrajets(int mois);
-    bool triTrajets(Trajet *t1, Trajet *t2);
 };
 
 class Capitaine : public Personnel

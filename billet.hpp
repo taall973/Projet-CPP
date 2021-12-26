@@ -24,17 +24,16 @@ class Billet
     Compagnie *compagnie;
 
 public:
-    Billet(int, Passager *, Trajet *);
+    Billet(int id, Passager *passager, Trajet *trajet);
     ~Billet();
     int getId();
-    void setId(int);
+    void setId(int id);
     int getPrixInitial();
-    void setPrixInitial(int);
+    void setPrixInitial(int prix);
     void Affiche();
     Passager *getPassager();
     vector<Trajet *> getTrajets();
-    void ajoutTrajet(Trajet *);
-    bool triTrajets(Trajet *t1, Trajet *t2);
+    void ajoutTrajet(Trajet *trajet);
 };
 
 #endif

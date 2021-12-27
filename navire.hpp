@@ -37,13 +37,13 @@ public:
     Compagnie *getCompagnie();
     int getMaxSeconds();
     int getMaxMatelots();
-    void setId(int);
-    void setNom(string);
-    void setTonnage(int);
-    void setCapaciteMarchandise(int);
-    void setMaxSeconds(int);
-    void setMaxMatelots(int);
-    void setCompagnie(Compagnie *);
+    void setId(int id);
+    void setNom(string nom);
+    void setTonnage(int tonnage);
+    void setCapaciteMarchandise(int capaciteMarchandise);
+    void setMaxSeconds(int maxSeconds);
+    void setMaxMatelots(int maxMatelots);
+    void setCompagnie(Compagnie *compagnie);
 };
 
 class NavireFret : public Navire

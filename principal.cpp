@@ -18,9 +18,9 @@ int main()
     Compagnie compagnie(101, "Spirit Waterways");
 
     //Instanciation des navires
-    Navire titanic(1, "Titanic", 100, 2, 2, 10, &compagnie, 44);
-    Navire liberty(2, "Liberty", 120, 1, 1, 120, &compagnie);
-    Navire spirit(3, "Spirit", 500, 2, 2, 100, &compagnie, 200);
+    NavirePassager titanic(1, "Titanic", 100, 2, 2, 10, &compagnie, 44);
+    NavireFret liberty(2, "Liberty", 120, 1, 1, 120, &compagnie);
+    NavirePassager spirit(3, "Spirit", 500, 2, 2, 100, &compagnie, 200);
 
     //Instanciation du personnel
     Capitaine sparrow(1, "Sparrow", "Jack", &compagnie, 100);
@@ -107,7 +107,20 @@ int main()
     InsulaireSecondaire roumanoff(1, "Roumanoff", "Anne");
     InsulaireSecondaire tagbo(2, "Tagbo", "Claudia");
 
-    
+    //Instanciation des billets
+    Billet billetBrassens(1, &brassens, &mars_nice_marseille);
+    Billet billetAznavour(2, &aznavour, &mars_marseille_leHavre);
+    Billet billetPiaf(3, &piaf, &mars_leHavre_dunkerque);
+    Billet billetObelix(4, &obelix, &mars_dunkerque_rouen);
+    Billet billetMilou(5, &milou, &mars_rouen_ajaccio);
+    Billet billetRoumanoff(6, &roumanoff, &avril_marseille_nice);
+    Billet billetTagbo(7, &tagbo, &avril_leHavre_marseille);
+
+    compagnie.AfficheNavires();
+    compagnie.AffichePersonnels();
+    compagnie.AfficheEscales();
+    compagnie.AfficheTrajets();
+    compagnie.AfficheBillets();
 
     return 0;
 }

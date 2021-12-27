@@ -40,7 +40,7 @@ int main()
     Escales rouen(5, "Rouen", 21);
     Escales ajaccio(6, "Ajaccio", 30);
 
-    //Instanciation des trajets de Mars
+    /*//Instanciation des trajets de Mars
     Trajet mars_nice_marseille(&nice, &marseille, &titanic, new Date(11, 3, 21, 10, 21), new Date(12, 3, 21, 9, 21));
     Trajet mars_marseille_leHavre(&marseille, &leHavre, &spirit, new Date(15, 3, 21, 17, 45), new Date(18, 3, 21, 10, 41));
     Trajet mars_leHavre_dunkerque(&leHavre, &dunkerque, &liberty, new Date(19, 3, 21, 6, 50), new Date(19, 3, 21, 20, 10));
@@ -114,7 +114,7 @@ int main()
     Billet billetObelix(4, &obelix, &mars_dunkerque_rouen);
     Billet billetMilou(5, &milou, &mars_rouen_ajaccio);
     Billet billetRoumanoff(6, &roumanoff, &avril_marseille_nice);
-    Billet billetTagbo(7, &tagbo, &avril_leHavre_marseille);
+    Billet billetTagbo(7, &tagbo, &avril_leHavre_marseille);*/
 
     compagnie.AfficheNavires();
     compagnie.AffichePersonnels();

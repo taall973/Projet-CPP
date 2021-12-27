@@ -41,6 +41,7 @@ class Trajet
 
 public:
     Trajet(Escales *portDepart, Escales *portArrivee, Navire *navire, Date *dateDepart, Date *dateArrivee);
+    ~Trajet();
     void ajoutEscales(Escales *escales);
     void ajoutPassager(Passager *passager, Billet *billet);
     Escales *getPortDepart();

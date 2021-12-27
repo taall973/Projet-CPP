@@ -7,6 +7,12 @@ Trajet::Trajet(Escales *portDep, Escales *portArr, Navire *nav, Date *dateDepart
     compagnie->AjoutTrajet(this);
 }
 
+Trajet::~Trajet()
+{
+    delete dateD;
+    delete dateA;
+}
+
 void Trajet::ajoutEscales(Escales *e)
 {
     prix += e->getPrix();

@@ -90,8 +90,7 @@ void Trajet::affichePassagers()
 }
 void Trajet::Affiche()
 {
-    cout << "Depart: " << this->getPortDepart() << " - " << *dateD << ", "
-         << "Arrivee: " << this->getPortArrive() << " - " << *dateA << ", Prix initial:" << prix << "€" << endl;
+    cout << "Depart: " << portDepart->getNom() << " - " << *dateD << ", " << "Arrivee: " << portArrive->getNom() << " - " << *dateA << ", Prix initial:" << prix << "$" << endl;
     this->afficheEscales();
     cout << "Passagers:" << endl;
     this->affichePassagers();

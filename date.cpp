@@ -33,7 +33,7 @@ int Date::getMM()
 
 void Date::afficher(ostream &flux) const
 {
-    flux << jour << "/" << mois << "/" << an << " - " << hh << ":" << mm << endl;
+    flux << jour << "/" << mois << "/" << an << " - " << hh << ":" << mm;
 }
 
 bool operator==(Date const &d1, Date const &d2)

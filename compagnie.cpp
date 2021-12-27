@@ -97,7 +97,6 @@ void Compagnie::AfficheTrajets()
     {
         (*itt)->Affiche();
     }
-    cout << toutTrajets.size() << endl;
 }
 
 void Compagnie::AfficheEscales()

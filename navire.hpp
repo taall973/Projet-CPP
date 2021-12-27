@@ -29,6 +29,7 @@ protected:
 public:
     Navire(int id, string nom, int tonnage, int maxSeconds, int maxMatelots, int capaciteMarchandise, int capacitePassagers = 0);
     Navire(int id, string nom, int tonnage, int maxSeconds, int maxMatelots, int capaciteMarchandise, Compagnie *compagnie, int capacitePassagers = 0);
+    ~Navire();
     int getId();
     string getNom();
     int getTonnage();

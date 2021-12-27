@@ -13,7 +13,29 @@ Compagnie::Compagnie(int i, string n)
     id = i;
     nom = n;
 }
-Compagnie::~Compagnie() {}
+Compagnie::~Compagnie()
+{
+    for (itp = toutPersonnels.begin(); itp != toutPersonnels.end(); itp++)
+    {
+        delete (*itp);
+    }
+    for (itn = toutNavires.begin(); itn != toutNavires.end(); itn++)
+    {
+        delete (*itn);
+    }
+    for (itb = toutBillets.begin(); itb != toutBillets.end(); itb++)
+    {
+        delete (*itb);
+    }
+    for (itt = toutTrajets.begin(); itt != toutTrajets.end(); itt++)
+    {
+        delete (*itt);
+    }
+    for (ite = toutEscales.begin(); ite != toutEscales.end(); ite++)
+    {
+        delete (*ite);
+    }
+}
 int Compagnie::getId()
 {
     return id;
@@ -75,6 +97,7 @@ void Compagnie::AfficheTrajets()
     {
         (*itt)->Affiche();
     }
+    cout << toutTrajets.size() << endl;
 }
 
 void Compagnie::AfficheEscales()
@@ -89,7 +112,7 @@ void Compagnie::AfficheEscales()
 void Compagnie::trajetsBillets(int id)
 {
     itb = find_if(toutBillets.begin(), toutBillets.end(), [&id](Billet *billet)
-               { return billet->getId() == id; });
+                  { return billet->getId() == id; });
     if (itb != toutBillets.end())
     {
         vector<Trajet *> trajets = (*itb)->getTrajets();

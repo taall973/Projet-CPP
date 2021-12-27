@@ -12,7 +12,13 @@ Escales::Escales(int i, string n, int p)
     prix = p;
     toutEscales.push_back(this);
 }
-Escales::~Escales(){}
+Escales::~Escales()
+{
+    for (size_t i = 0; i < toutEscales.size(); i++)
+    {
+        delete toutEscales[i];
+    }
+}
 int Escales::getId()
 {
     return id;

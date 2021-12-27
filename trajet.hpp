@@ -41,7 +41,7 @@ class Trajet
 
 public:
     Trajet(Escales *portDepart, Escales *portArrivee, Navire *navire, Date *dateDepart, Date *dateArrivee);
-    ~Trajet();
+    virtual ~Trajet();
     void ajoutEscales(Escales *escales);
     void ajoutPassager(Passager *passager, Billet *billet);
     Escales *getPortDepart();
@@ -70,7 +70,7 @@ public:
 class TriTrajets
 {
 public:
-    bool operator()(const Trajet *t1,const Trajet *t2)
+    bool operator()(const Trajet *t1, const Trajet *t2)
     {
         return t1 < t2;
     }

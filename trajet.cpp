@@ -2,13 +2,18 @@
 
 using namespace std;
 
-Trajet::Trajet(Escales *portDep, Escales *portArr, Navire *nav, Date *dateDepart, Date *dateArrivee) : portDepart(portDep), portArrive(portArr), navire(nav), dateD(dateDepart), dateA(dateArrivee), prix(portDepart->getPrix() + portArrive->getPrix()), compagnie(navire->getCompagnie())
+Trajet::Trajet(Escales *portDep, Escales *portArr, Navire *nav, Date *dateDepart, Date *dateArrivee) : portDepart(portDep), portArrive(portArr), navire(nav), dateD(dateDepart), dateA(dateArrivee), prix(portDepart->getPrix() + portArrive->getPrix())
 {
+    compagnie = navire->getCompagnie();
     compagnie->AjoutTrajet(this);
 }
 
 Trajet::~Trajet()
 {
+    delete portDepart;
+    delete portArrive;
+    delete navire;
+    delete compagnie;
     delete dateD;
     delete dateA;
 }

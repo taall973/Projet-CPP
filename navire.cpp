@@ -4,6 +4,7 @@ using namespace std;
 
 Navire::Navire(int i, string n, int t, int ms, int mm, int cm, int cp) : id(i), nom(n), tonnage(t), maxSeconds(ms), maxMatelots(mm), capaciteMarchandise(cm), capacitePassagers(cp)
 {
+    
 }
 Navire::Navire(int i, string n, int t, int ms, int mm, int cm, Compagnie *c, int cp) : id(i), nom(n), compagnie(c), tonnage(t), maxSeconds(ms), maxMatelots(mm), capaciteMarchandise(cm), capacitePassagers(cp)
 {

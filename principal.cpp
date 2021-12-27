@@ -116,6 +116,9 @@ int main()
     Billet billetRoumanoff(6, &roumanoff, &avril_marseille_nice);
     Billet billetTagbo(7, &tagbo, &avril_leHavre_marseille);
 
+    //cout << "navire 0:" << compagnie.trajetsBillets(1) << endl;
+    cout << "o" << endl;
+    compagnie.trajetsBillets(1);
     compagnie.AfficheNavires();
     compagnie.AffichePersonnels();
     compagnie.AfficheEscales();

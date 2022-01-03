@@ -1,3 +1,5 @@
+/*Turikumwe Fabrice E.
+Allan Tarcy*/
 #include "compagnie.hpp"
 
 using namespace std;

@@ -1,3 +1,6 @@
+/*Turikumwe Fabrice E.
+Allan Tarcy*/
+
 #include "billet.hpp"
 
 using namespace std;

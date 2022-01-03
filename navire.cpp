@@ -1,3 +1,5 @@
+/*Turikumwe Fabrice E.
+Allan Tarcy*/
 #include "navire.hpp"
 
 using namespace std;

@@ -1,3 +1,5 @@
+/*Turikumwe Fabrice E.
+Allan Tarcy*/
 #include "escales.hpp"
 
 using namespace std;

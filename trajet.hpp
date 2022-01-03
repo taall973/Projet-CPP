@@ -1,3 +1,5 @@
+/*Turikumwe Fabrice E.
+Allan Tarcy*/
 #ifndef TRAJET_HPP
 #define TRAJET_HPP
 

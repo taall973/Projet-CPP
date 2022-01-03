@@ -1,3 +1,5 @@
+/*Turikumwe Fabrice E.
+Allan Tarcy*/
 #ifndef ESCALES_HPP
 #define ESCALES_HPP
 

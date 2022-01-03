@@ -1,3 +1,5 @@
+/*Turikumwe Fabrice E.
+Allan Tarcy*/
 #ifndef COMPAGNIE_HPP
 #define COMPAGNIE_HPP
 

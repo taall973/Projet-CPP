@@ -1,3 +1,5 @@
+/*Turikumwe Fabrice E.
+Allan Tarcy*/
 #include "trajet.hpp"
 
 using namespace std;

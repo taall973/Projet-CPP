@@ -18,7 +18,7 @@ using namespace std;
 int main()
 {
 
-    Compagnie compagnie(101, "Spirit Waterways");
+    Compagnie compagnie(101, "Penn Ar Bed");
 
     //Instanciation des navires
     NavirePassager titanic(1, "Titanic", 100, 2, 2, 10, &compagnie, 44);

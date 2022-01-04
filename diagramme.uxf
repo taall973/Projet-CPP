@@ -83,5 +83,5 @@ m1=*
 m2=*
 travaille</panel_attributes><additional_attributes>1220;110;1220;330;10;330;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1270</x><y>390</y><w>340</w><h>100</h></coordinates><panel_attributes>lt=-
 m1=1
-m2=1..*
+m2=*
 travaille</panel_attributes><additional_attributes>10;80;320;10</additional_attributes></element></diagram>

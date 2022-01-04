@@ -36,7 +36,7 @@ m1=*
 m2=1..*
 possede</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>99</x><y>475</y><w>390</w><h>50</h></coordinates><panel_attributes>lt=-
 m1=1
-m2=*
+m2=1..*
 possede</panel_attributes><additional_attributes>10;20;370;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1590</x><y>295</y><w>160</w><h>170</h></coordinates><panel_attributes>Personnel
 --
 

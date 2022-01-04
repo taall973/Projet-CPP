@@ -12,10 +12,16 @@ Trajet::Trajet(Escales *portDep, Escales *portArr, Navire *nav, Date *dateDepart
 
 Trajet::~Trajet()
 {
+    passagers.clear();
+    billets.clear();
+    escales.clear();
+    seconds.clear();
+    matelots.clear();
     delete portDepart;
     delete portArrive;
     delete navire;
     delete compagnie;
+    delete capitaine;
     delete dateD;
     delete dateA;
 }
@@ -54,12 +60,12 @@ void Trajet::setPortArrive(Escales *portArr)
     portArrive = portArr;
 }
 
-Date *Trajet::getDateD()
+Date *Trajet::getDateD()const
 {
     return dateD;
 }
 
-Date *Trajet::getDateA()
+Date *Trajet::getDateA()const
 {
     return dateA;
 }
@@ -94,8 +100,9 @@ void Trajet::Affiche()
 {
     cout << "Depart: " << portDepart->getNom() << " - " << *dateD << ", " << "Arrivee: " << portArrive->getNom() << " - " << *dateA << ", Prix initial:" << prix << "$" << endl;
     this->afficheEscales();
-    cout << "Passagers:" << endl;
+    cout << "Passagers:";
     this->affichePassagers();
+    cout << endl;
 }
 
 int Trajet::getPrixInitial()

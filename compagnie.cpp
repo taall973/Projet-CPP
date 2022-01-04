@@ -4,11 +4,11 @@ Allan Tarcy*/
 
 using namespace std;
 
-vector<Personnel *>::iterator itp;
-vector<Navire *>::iterator itn;
-vector<Billet *>::iterator itb;
-vector<Trajet *>::iterator itt;
-vector<Escales *>::iterator ite;
+list<Personnel *>::iterator itp;
+list<Navire *>::iterator itn;
+list<Billet *>::iterator itb;
+list<Trajet *>::iterator itt;
+list<Escales *>::iterator ite;
 
 Compagnie::Compagnie(int i, string n)
 {
@@ -17,6 +17,11 @@ Compagnie::Compagnie(int i, string n)
 }
 Compagnie::~Compagnie()
 {
+    /*toutPersonnels.clear();
+    toutNavires.clear();
+    toutBillets.clear();
+    toutTrajets.clear();
+    toutEscales.clear();*/
     for (itp = toutPersonnels.begin(); itp != toutPersonnels.end(); itp++)
     {
         delete (*itp);
@@ -58,6 +63,7 @@ void Compagnie::AjoutNavire(Navire *n)
 void Compagnie::AjoutBillets(Billet *b)
 {
     toutBillets.push_back(b);
+    b->setCompagnie(this);
 }
 void Compagnie::AjoutTrajet(Trajet *t)
 {
@@ -116,7 +122,9 @@ void Compagnie::trajetsBillets(int id)
                   { return billet->getId() == id; });
     if (itb != toutBillets.end())
     {
-        vector<Trajet *> trajets = (*itb)->getTrajets();
+        list<Trajet *> trajets;
+        copy((*itb)->getTrajets().begin(), (*itb)->getTrajets().end(), trajets.begin());
+        //list<Trajet *> trajets = (*itb)->getTrajets();
         for (itt = trajets.begin(); itt != trajets.end(); itt++)
         {
             (*itt)->Affiche();
@@ -129,10 +137,37 @@ void Compagnie::trajetsPersonnel(Personnel *p, int mois)
     itp = find(toutPersonnels.begin(), toutPersonnels.end(), p);
     if (itp != toutPersonnels.end())
     {
-        vector<Trajet *> trajets = (*itp)->getTrajets(mois);
+        list<Trajet *> trajets;
+        copy((*itp)->getTrajets(mois).begin(), (*itp)->getTrajets(mois).end(), trajets.begin());
+        //list<Trajet *> trajets = (*itp)->getTrajets(mois);
         for (itt = trajets.begin(); itt != trajets.end(); itt++)
         {
             (*itt)->Affiche();
         }
     }
+}
+bool Compagnie::comparateurPassagers(const Passager *pass1, const Passager *pass2){
+    if(pass2->getNom() == pass1->getNom()){
+        return pass2->getPrenom() > pass1->getPrenom();
+    }
+    else{
+        return pass2->getNom() > pass1->getNom();
+    }
+}
+bool Compagnie::comparateurPersonnels(const Personnel *pers1, const Personnel *pers2){
+    if(pers2->getNom() == pers1->getNom()){
+        return pers2->getPrenom() > pers1->getPrenom();
+    }
+    else{
+        return pers2->getNom() > pers1->getNom();
+    }
+}
+bool Compagnie::comparateurTrajets(const Trajet *traj1, const Trajet *traj2){
+    return traj2->getDateD() > traj1->getDateD();
+}
+bool Compagnie::comparateurBillets(const Billet *bill1, const Billet *bill2){
+    return bill2->getId() > bill1->getId();
+}
+bool Compagnie::comparateurNavires(const Navire *nav1, const Navire *nav2){
+    return nav2->getNom() > nav1->getNom();
 }

@@ -11,16 +11,19 @@ Personnel::Personnel(int i, string n, string p, Compagnie *c) : id(i), nom(n), p
     prenom = p;
     compagnie->AjoutPersonnel(this);
 }
-Personnel::~Personnel() {}
+Personnel::~Personnel() {
+    trajets.clear();
+    delete compagnie;
+}
 int Personnel::getId()
 {
     return id;
 }
-string Personnel::getNom()
+string Personnel::getNom()const
 {
     return nom;
 }
-string Personnel::getPrenom()
+string Personnel::getPrenom()const
 {
     return prenom;
 }

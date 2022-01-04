@@ -25,6 +25,7 @@ public:
     //2 constructeurs
     Passager(int id, string nom, string prenom);
     Passager(int id, string nom, string prenom, Billet *billet);
+    ~Passager();
     int getId();
     string getNom() const;
     string getPrenom() const;

@@ -33,7 +33,7 @@ public:
     Navire(int id, string nom, int tonnage, int maxSeconds, int maxMatelots, int capaciteMarchandise, Compagnie *compagnie, int capacitePassagers = 0);
     ~Navire();
     int getId();
-    string getNom();
+    string getNom()const;
     int getTonnage();
     int getCapaciteMarchandise();
     int getCapacitePassagers();

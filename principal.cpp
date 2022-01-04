@@ -111,13 +111,21 @@ int main()
     InsulaireSecondaire tagbo(2, "Tagbo", "Claudia");
 
     //Instanciation des billets
-    Billet billetBrassens(1, &brassens, &mars_nice_marseille);
-    Billet billetAznavour(2, &aznavour, &mars_marseille_leHavre);
-    Billet billetPiaf(3, &piaf, &mars_leHavre_dunkerque);
-    Billet billetObelix(4, &obelix, &mars_dunkerque_rouen);
-    Billet billetMilou(5, &milou, &mars_rouen_ajaccio);
-    Billet billetRoumanoff(6, &roumanoff, &avril_marseille_nice);
-    Billet billetTagbo(7, &tagbo, &avril_leHavre_marseille);
+    Billet b(12, &brassens, &mars_dunkerque_rouen, &compagnie);
+    Billet billetBrassens(1, &brassens, &mars_nice_marseille, &compagnie);
+    Billet billetAznavour(2, &aznavour, &mars_marseille_leHavre, &compagnie);
+    Billet billetPiaf(3, &piaf, &mars_leHavre_dunkerque, &compagnie);
+    Billet billetObelix(4, &obelix, &mars_dunkerque_rouen, &compagnie);
+    Billet billetMilou(5, &milou, &mars_rouen_ajaccio, &compagnie);
+    Billet billetRoumanoff(6, &roumanoff, &avril_marseille_nice, &compagnie);
+    Billet billetTagbo(7, &tagbo, &avril_leHavre_marseille, &compagnie);
+
+    //Trier les listes dans compagnies
+    compagnie.toutPersonnels.sort(Compagnie::comparateurPersonnels);
+    compagnie.toutNavires.sort(Compagnie::comparateurNavires);
+    compagnie.toutBillets.sort(Compagnie::comparateurBillets);
+    compagnie.toutTrajets.sort(Compagnie::comparateurTrajets);
+    compagnie.passagers.sort(Compagnie::comparateurPassagers);
 
     compagnie.AfficheNavires();
     compagnie.AffichePersonnels();

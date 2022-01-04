@@ -16,6 +16,7 @@ private:
 
 public:
     Date(int j, int mo, int a, int h = 0, int m = 0);
+    ~Date();
     int getJour();
     int getMois();
     int getAn();

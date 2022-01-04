@@ -28,7 +28,6 @@ class Date;
 
 class Trajet
 {
-
     vector<Escales *> escales;
     Escales *portDepart, *portArrive;
     vector<Passager *> passagers;
@@ -51,8 +50,8 @@ public:
     Compagnie *getCompagnie();
     void setPortDepart(Escales *portDepart);
     void setPortArrive(Escales *portArrivee);
-    Date *getDateD();
-    Date *getDateA();
+    Date *getDateD()const;
+    Date *getDateA()const;
     void setDateD(Date *dateDepart);
     void setDateA(Date *dateArrivee);
     void afficheEscales();

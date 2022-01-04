@@ -7,7 +7,9 @@ using namespace std;
 Date::Date(int j, int mo, int a, int h, int m) : jour(j % 31), mois(m % 12), an(a % 9999), hh(h % 24), mm(m % 60)
 {
 }
-
+Date::~Date(){
+    
+}
 int Date::getJour()
 {
     return jour;

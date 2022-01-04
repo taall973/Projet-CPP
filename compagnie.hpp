@@ -7,6 +7,7 @@ Allan Tarcy*/
 #include <string>
 #include <vector>
 #include <list>
+#include <set>
 #include <algorithm>
 
 #include "personnel.hpp"
@@ -28,14 +29,14 @@ class Compagnie
     
     int id;
     string nom;
-    vector<Passager *> passagers;
-    vector<Personnel *> toutPersonnels;
-    vector<Navire *> toutNavires;
-    vector<Billet *> toutBillets;
-    vector<Trajet *> toutTrajets;
-    vector<Escales *> toutEscales;
 
 public:
+    list<Personnel *> toutPersonnels;
+    list<Passager *> passagers;
+    list<Navire *> toutNavires;
+    list<Billet *> toutBillets;
+    list<Trajet *> toutTrajets;
+    list<Escales *> toutEscales;
     Compagnie(int id, string nom);
     ~Compagnie();
     int getId();
@@ -52,6 +53,12 @@ public:
     void AfficheEscales();
     void trajetsBillets(int idBillet);
     void trajetsPersonnel(Personnel *personnel, int mois);
+    static bool comparateurPassagers(const Passager *pass1, const Passager *pass2);
+    static bool comparateurPersonnels(const Personnel *pers1, const Personnel *pers2);
+    static bool comparateurTrajets(const Trajet *traj1, const Trajet *traj2);
+    static bool comparateurBillets(const Billet *bill1, const Billet *bill2);
+    static bool comparateurNavires(const Navire *nav1, const Navire *nav2);
+    
 };
 
 #endif

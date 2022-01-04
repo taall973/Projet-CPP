@@ -38,7 +38,9 @@ InsulaireSecondaire::InsulaireSecondaire(int i, string n, string p, Billet *b) :
     reduction = 0.25;
     billetPassager.push_back(b);
 }
-
+Passager::~Passager(){
+    billetPassager.clear();
+}
 int Passager::getId()
 {
     return id;

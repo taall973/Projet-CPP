@@ -16,6 +16,7 @@ Escales::Escales(int i, string n, int p)
 }
 Escales::~Escales()
 {
+    //toutEscales.clear();
     for (size_t i = 0; i < toutEscales.size(); i++)
     {
         delete toutEscales[i];

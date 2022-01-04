@@ -24,8 +24,8 @@ public:
     Personnel(int id, string nom, string prenom, Compagnie *compagnie);
     ~Personnel();
     int getId();
-    string getNom();
-    string getPrenom();
+    string getNom()const;
+    string getPrenom()const;
     string getCompagnie();
     void setId(int);
     void setNom(string);

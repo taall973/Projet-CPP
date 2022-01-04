@@ -14,6 +14,7 @@ Navire::Navire(int i, string n, int t, int ms, int mm, int cm, Compagnie *c, int
 
 Navire::~Navire()
 {
+    //trajets.clear();
     for (size_t i = 0; i < trajets.size(); i++)
     {
         delete trajets[i];
@@ -25,7 +26,7 @@ int Navire::getId()
 {
     return id;
 }
-string Navire::getNom()
+string Navire::getNom()const
 {
     return nom;
 }

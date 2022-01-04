@@ -25,11 +25,13 @@ class Billet
 
 public:
     Billet(int id, Passager *passager, Trajet *trajet);
+    Billet(int id, Passager *passager, Trajet *trajet, Compagnie *com);
     ~Billet();
-    int getId();
+    int getId()const;
     void setId(int id);
     int getPrixInitial();
     void setPrixInitial(int prix);
+    void setCompagnie(Compagnie *com);
     void Affiche();
     Passager *getPassager();
     vector<Trajet *> getTrajets();

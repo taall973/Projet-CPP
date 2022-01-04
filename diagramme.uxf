@@ -129,10 +129,10 @@ m2=*
 travaille</panel_attributes><additional_attributes>1000;110;1000;290;10;290;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>730</x><y>590</y><w>1240</w><h>350</h></coordinates><panel_attributes>lt=-
 m1=*
 m2=*
-travaille</panel_attributes><additional_attributes>1220;110;1220;330;10;330;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1270</x><y>390</y><w>340</w><h>100</h></coordinates><panel_attributes>lt=-
+travaille</panel_attributes><additional_attributes>1220;110;1220;330;10;330;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1270</x><y>390</y><w>340</w><h>110</h></coordinates><panel_attributes>lt=-
 m1=1
 m2=*
-travaille</panel_attributes><additional_attributes>10;80;320;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1250</x><y>550</y><w>210</w><h>100</h></coordinates><panel_attributes>lt=-
+travaille</panel_attributes><additional_attributes>10;80;150;80;150;10;320;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1250</x><y>550</y><w>210</w><h>100</h></coordinates><panel_attributes>lt=-
 m1=1
 m2=1
 pilote</panel_attributes><additional_attributes>10;10;10;70;190;70</additional_attributes></element><element><id>Relation</id><coordinates><x>31</x><y>566</y><w>80</w><h>160</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>60;10;60;70;10;70;10;140</additional_attributes></element><element><id>Relation</id><coordinates><x>79</x><y>620</y><w>150</w><h>110</h></coordinates><panel_attributes>lt=-</panel_attributes><additional_attributes>10;10;130;10;130;90</additional_attributes></element><element><id>UMLClass</id><coordinates><x>150</x><y>710</y><w>120</w><h>110</h></coordinates><panel_attributes>Insulaire Secondaire

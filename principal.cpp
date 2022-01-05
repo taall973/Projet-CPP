@@ -120,12 +120,12 @@ int main()
     Billet billetRoumanoff(6, &roumanoff, &avril_marseille_nice, &compagnie);
     Billet billetTagbo(7, &tagbo, &avril_leHavre_marseille, &compagnie);
 
-    //Trier les listes dans compagnies
-    compagnie.toutPersonnels.sort(Compagnie::comparateurPersonnels);
-    compagnie.toutNavires.sort(Compagnie::comparateurNavires);
-    compagnie.toutBillets.sort(Compagnie::comparateurBillets);
-    compagnie.toutTrajets.sort(Compagnie::comparateurTrajets);
-    compagnie.passagers.sort(Compagnie::comparateurPassagers);
+    //Trie des données de la compagnie
+    compagnie.triPersonnels();
+    compagnie.triNavires();
+    compagnie.triBillets();
+    compagnie.triTrajets();
+    compagnie.triPassagers();
 
     compagnie.AfficheNavires();
     compagnie.AffichePersonnels();

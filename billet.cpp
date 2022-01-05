@@ -48,7 +48,7 @@ void Billet::setPrixInitial(int p)
 }
 void Billet::Affiche()
 {
-    cout << "Voyageur:" << passager->getNom() << " " << passager->getPrenom() << " Prix:" << getPrixInitial() << "€" << endl;
+    cout << "Voyageur: " << passager->getNom() << " " << passager->getPrenom() << " Prix: " << getPrixInitial() << "$" << endl;
 }
 Passager *Billet::getPassager()
 {

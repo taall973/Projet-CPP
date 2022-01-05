@@ -51,6 +51,32 @@ string Compagnie::getNom()
 {
     return nom;
 }
+
+list<Personnel *> Compagnie::getToutPersonnels()
+{
+    return toutPersonnels;
+}
+list<Passager *> Compagnie::getPassagers()
+{
+    return passagers;
+}
+list<Navire *> Compagnie::getToutNavires()
+{
+    return toutNavires;
+}
+list<Billet *> Compagnie::getToutBillets()
+{
+    return toutBillets;
+}
+list<Trajet *> Compagnie::getToutTrajets()
+{
+    return toutTrajets;
+}
+list<Escales *> Compagnie::getToutEscales()
+{
+    return toutEscales;
+}
+
 void Compagnie::AjoutPersonnel(Personnel *p)
 {
     toutPersonnels.push_back(p);
@@ -73,6 +99,23 @@ void Compagnie::AjoutEscales(Escales *e)
 {
     toutEscales.push_back(e);
 }
+
+void Compagnie::triPersonnels() {
+    toutPersonnels.sort(comparateurPersonnels);
+}
+void Compagnie::triPassagers() {
+    passagers.sort(comparateurPassagers);
+}
+void Compagnie::triNavires() {
+    toutNavires.sort(comparateurNavires);
+}
+void Compagnie::triBillets() {
+    toutBillets.sort(comparateurBillets);
+}
+void Compagnie::triTrajets() {
+    toutTrajets.sort(comparateurTrajets);
+}
+
 void Compagnie::AffichePersonnels()
 {
     cout << "Personnels:" << endl;
@@ -146,28 +189,37 @@ void Compagnie::trajetsPersonnel(Personnel *p, int mois)
         }
     }
 }
-bool Compagnie::comparateurPassagers(const Passager *pass1, const Passager *pass2){
-    if(pass2->getNom() == pass1->getNom()){
+bool Compagnie::comparateurPassagers(const Passager *pass1, const Passager *pass2)
+{
+    if (pass2->getNom() == pass1->getNom())
+    {
         return pass2->getPrenom() > pass1->getPrenom();
     }
-    else{
+    else
+    {
         return pass2->getNom() > pass1->getNom();
     }
 }
-bool Compagnie::comparateurPersonnels(const Personnel *pers1, const Personnel *pers2){
-    if(pers2->getNom() == pers1->getNom()){
+bool Compagnie::comparateurPersonnels(const Personnel *pers1, const Personnel *pers2)
+{
+    if (pers2->getNom() == pers1->getNom())
+    {
         return pers2->getPrenom() > pers1->getPrenom();
     }
-    else{
+    else
+    {
         return pers2->getNom() > pers1->getNom();
     }
 }
-bool Compagnie::comparateurTrajets(const Trajet *traj1, const Trajet *traj2){
+bool Compagnie::comparateurTrajets(const Trajet *traj1, const Trajet *traj2)
+{
     return traj2->getDateD() > traj1->getDateD();
 }
-bool Compagnie::comparateurBillets(const Billet *bill1, const Billet *bill2){
+bool Compagnie::comparateurBillets(const Billet *bill1, const Billet *bill2)
+{
     return bill2->getId() > bill1->getId();
 }
-bool Compagnie::comparateurNavires(const Navire *nav1, const Navire *nav2){
+bool Compagnie::comparateurNavires(const Navire *nav1, const Navire *nav2)
+{
     return nav2->getNom() > nav1->getNom();
 }

@@ -26,26 +26,37 @@ class Trajet;
 class Escales;
 class Compagnie
 {
-    
+
     int id;
     string nom;
-
-public:
     list<Personnel *> toutPersonnels;
     list<Passager *> passagers;
     list<Navire *> toutNavires;
     list<Billet *> toutBillets;
     list<Trajet *> toutTrajets;
     list<Escales *> toutEscales;
+
+public:
     Compagnie(int id, string nom);
     ~Compagnie();
     int getId();
     string getNom();
+    list<Personnel *> getToutPersonnels();
+    list<Passager *> getPassagers();
+    list<Navire *> getToutNavires();
+    list<Billet *> getToutBillets();
+    list<Trajet *> getToutTrajets();
+    list<Escales *> getToutEscales();
     void AjoutPersonnel(Personnel *personnel);
     void AjoutNavire(Navire *navire);
     void AjoutBillets(Billet *billet);
     void AjoutTrajet(Trajet *trajet);
     void AjoutEscales(Escales *escale);
+    void triPersonnels();
+    void triPassagers();
+    void triNavires();
+    void triBillets();
+    void triTrajets();
     void AffichePersonnels();
     void AfficheNavires();
     void AfficheBillets();
@@ -58,7 +69,6 @@ public:
     static bool comparateurTrajets(const Trajet *traj1, const Trajet *traj2);
     static bool comparateurBillets(const Billet *bill1, const Billet *bill2);
     static bool comparateurNavires(const Navire *nav1, const Navire *nav2);
-    
 };
 
 #endif

@@ -93,14 +93,17 @@ void Trajet::affichePassagers()
     vector<Passager *>::iterator it;
     for (it = passagers.begin(); it != passagers.end(); it++)
     {
-        cout << (*it)->getNom() << " " << (*it)->getPrenom() << (*it)->getCategorie() << endl;
+        cout << (*it)->getNom() << " " << (*it)->getPrenom() << " Categorie:" << (*it)->getCategorie() << endl;
+    }
+    if(passagers.empty() == true){
+        cout << "Pas de passager au moment..." << endl;
     }
 }
 void Trajet::Affiche()
 {
     cout << "Depart: " << portDepart->getNom() << " - " << *dateD << ", " << "Arrivee: " << portArrive->getNom() << " - " << *dateA << ", Prix initial: " << prix << "$" << endl;
     this->afficheEscales();
-    cout << "Passagers:";
+    cout << "Passager:";
     this->affichePassagers();
     cout << endl;
 }
